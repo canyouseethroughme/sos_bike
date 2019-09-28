@@ -99,7 +99,7 @@ const Navbar = () => (
         top: 18px;
         left: -30px;
         z-index: 10;
-        width: 120px;
+        width: 160px;
         height: 131px;
         border-radius: 6px;
         background: #1c1713 0% 0% no-repeat padding-box;
@@ -113,7 +113,7 @@ const Navbar = () => (
       .dropdownContent > a {
         font-family: Ronnia, regular;
         font-size: 14px;
-        font-weight: 500;
+        font-weight: 300;
         text-transform: capitalize;
         color: #fafafabf;
         padding-left: 30px;

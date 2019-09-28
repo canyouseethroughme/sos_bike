@@ -13,21 +13,45 @@ class Index extends React.Component {
   }
 
   nextBike = () => {
-    const newIndex = this.state.bicycle.index + 1;
-    this.setState({
-      bicycle: data.bicycles[newIndex]
-    });
+    const toAdd = this.state.bicycles[0];
+    let newBicycles = this.state.bicycles.slice(1);
+    newBicycles.push(toAdd);
+
+    let newIndex;
+    if (this.state.bicycle.index < this.state.bicycles.length - 1) {
+      newIndex = this.state.bicycle.index + 1;
+    } else {
+      newIndex = 0;
+    }
+
+    this.setState(
+      {
+        bicycle: data.bicycles.find(v => v.index === newIndex)
+      },
+      () => {
+        this.setState({
+          bicycles: newBicycles
+        });
+      }
+    );
   };
 
   prevBike = () => {
     const newIndex = this.state.bicycle.index - 1;
     this.setState({
-      bicycle: data.bicycles[newIndex]
+      bicycle: data.bicycles.find(v => v.index === newIndex)
     });
   };
 
   render() {
     const { bicycles, bicycle } = this.state;
+
+    const translateIndex = bicycles.findIndex(v => v.index === bicycle.index);
+    console.log("====================================");
+    console.log("bicycle:", bicycle);
+    console.log("bicycles:", bicycles);
+    console.log("translateIndex:", translateIndex);
+    console.log("====================================");
 
     return (
       <div>
@@ -58,7 +82,7 @@ class Index extends React.Component {
                 <div
                   className="cards-slider-wrapper"
                   style={{
-                    transform: `translateX(-${bicycle.index *
+                    transform: `translateX(-${translateIndex *
                       (100 / bicycles.length)}%)`
                   }}
                 >
@@ -70,7 +94,7 @@ class Index extends React.Component {
             </div>
             <button
               onClick={() => this.nextBike()}
-              disabled={bicycle.index === data.bicycles.length - 1}
+              /* disabled={bicycle.index === data.bicycles.length - 1} */
             >
               &rarr;
             </button>

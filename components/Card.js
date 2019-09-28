@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import Link from "next/link";
 
 const Card = ({ bicycle }) => {
-  const { index, type, picture, description } = bicycle;
+  const { index, type, picture, description, link } = bicycle;
   return (
     <div>
       <div id={`card-${index}`} className="card">
@@ -10,9 +10,9 @@ const Card = ({ bicycle }) => {
         <div className="details">
           <p className="type">{type}</p>
           <p className="description">{description}</p>
-          <button>
-            <Link>View</Link>
-          </button>
+          <a href="www.google.com">
+            <button>View</button>
+          </a>
         </div>
       </div>
       <style jsx>{`
@@ -21,7 +21,6 @@ const Card = ({ bicycle }) => {
           flex: 1;
           width: 280;
           height: 415;
-          opacity: 0.7;
           transition: opacity 300ms linear,
             transform 300ms cubic-bezier(0.4, 0.03, 0.5, 0.9);
           transform: scale(0.6);
@@ -42,9 +41,9 @@ const Card = ({ bicycle }) => {
         }
 
         .type {
-          margin-top: 15px;
+          margin-top: 10px;
           font-family: ronnia, sans-serif;
-          font-size: 16px;
+          font-size: 14px;
           letter-spacing: 0;
           color: #fafafa;
           text-transform: uppercase;
@@ -59,7 +58,7 @@ const Card = ({ bicycle }) => {
           color: #fafafa;
         }
         button {
-          margin: 20px auto;
+          margin: 25px auto;
           width: 120px;
           height: 30px;
           background: #997f67 0% 0% no-repeat padding-box;
@@ -70,6 +69,7 @@ const Card = ({ bicycle }) => {
           font-size: 14px;
           color: #fafafa;
         }
+
         button:hover {
           background-color: #fafafa;
           color: #997f67;
