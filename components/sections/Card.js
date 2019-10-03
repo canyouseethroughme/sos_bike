@@ -1,8 +1,7 @@
 import PropTypes from "prop-types";
-import Link from "next/link";
 
 const Card = ({ bicycle }) => {
-  const { index, type, picture, description, link } = bicycle;
+  const { index, type, picture, description } = bicycle;
   return (
     <div>
       <div id={`card-${index}`} className="card">

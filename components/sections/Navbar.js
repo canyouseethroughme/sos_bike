@@ -4,38 +4,41 @@ const Navbar = () => (
   <div>
     <nav>
       <ul>
-        <Link href="">
+        <Link href="#homePage">
           <a id="firstChild">Home</a>
         </Link>
 
         <div className="dropdown">
-          <Link href="">
+          <Link href="#shopPage">
             <a id="secondChild">
               Shop <i className="downArrow"></i>
             </a>
           </Link>
           <div className="dropdownContent">
             <Link href="#">
-              <a>Vintage</a>
+              <a>Custom bikes</a>
             </Link>
             <Link href="#">
-              <a>Retro</a>
+              <a>Retro bikes</a>
             </Link>
             <Link href="#">
-              <a>Refurbished</a>
+              <a>New bikes</a>
+            </Link>
+            <Link href="#">
+              <a>Bike parts</a>
             </Link>
           </div>
         </div>
 
-        <Link href="#">
+        <Link href="#homePage">
           <a>
             <img src="static/logo.png" />
           </a>
         </Link>
-        <Link href="">
+        <Link href="#whyusPage">
           <a id="thirdChild">Why us</a>
         </Link>
-        <Link href="">
+        <Link href="#aboutPage">
           <a id="fourthChild">About</a>
         </Link>
       </ul>
@@ -65,7 +68,8 @@ const Navbar = () => (
         color: #fafafa;
         letter-spacing: 0;
       }
-      #firstChild {
+      #firstChild,
+      #secondChild {
         justify-self: start;
       }
       #thirdChild,

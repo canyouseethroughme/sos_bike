@@ -1,7 +1,7 @@
 {
   "name": "package.json",
   "version": "1.0.0",
-  "description": "",
+  "description": "sosbike",
   "main": "index.js",
   "scripts": {
     "dev": "next",
@@ -15,7 +15,7 @@
   "keywords": [
     "sosbike"
   ],
-  "author": "",
+  "author": "stefandrei",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/canyouseethroughme/sos_bike/issues"
@@ -24,6 +24,7 @@
   "dependencies": {
     "next": "^8.1.0",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-map-gl": "^5.0.11"
   }
 }
