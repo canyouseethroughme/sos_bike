@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 const Card = ({ bicycle }) => {
-  const { index, type, picture, description } = bicycle;
+  const { index, type, picture, description, link } = bicycle;
   return (
     <div>
       <div id={`card-${index}`} className="card">
@@ -9,7 +9,7 @@ const Card = ({ bicycle }) => {
         <div className="details">
           <p className="type">{type}</p>
           <p className="description">{description}</p>
-          <a href="www.google.com">
+          <a href={link}>
             <button>View</button>
           </a>
         </div>
@@ -26,6 +26,7 @@ const Card = ({ bicycle }) => {
           background: #1c1713 0% 0% no-repeat padding-box;
           border-radius: 10px;
           opacity: 0.6;
+          backdrop-filter: blur(20px);
         }
         img {
           width: 280px;

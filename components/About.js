@@ -1,5 +1,5 @@
 import DynamicComponentWithNoSSR from "../components/sections/DynamicComponentNoSSR";
-
+import Link from "next/link";
 const About = () => {
   return (
     <div>
@@ -17,21 +17,16 @@ const About = () => {
             et dolore magna aliquyam erat, sed diam voluptua.
           </p>
           <div className="icons">
-            <a
-              href="https://www.facebook.com/aarhussosbike/"
-              target="_blank"
-              className="fa"
-            >
-              &#xf09a;
-            </a>
-
-            <a
-              href="https://www.instagram.com/s0sbike/"
-              target="_blank"
-              className="fa"
-            >
-              &#xf16d;
-            </a>
+            <Link href="https://www.facebook.com/aarhussosbike/">
+              <a target="_blank" className="fa">
+                &#xf09a;
+              </a>
+            </Link>
+            <Link href="https://www.instagram.com/s0sbike/">
+              <a target="_blank" className="fa">
+                &#xf16d;
+              </a>
+            </Link>
           </div>
           <a href="mailto:info@sosbike.dk">
             <button>Contact us</button>

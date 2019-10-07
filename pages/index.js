@@ -27,7 +27,16 @@ const Index = () => {
       </Head>
 
       <div className="content">
-        <Navbar />
+        <Navbar
+          home="index"
+          shop="#shopPage"
+          custom="custom-bikes"
+          retro="retro-bikes"
+          new="new-bikes"
+          parts="bike-parts"
+          whyus="#whyusPage"
+          about="#aboutPage"
+        />
         <Slider />
         <Bikes />
         <Whyus />

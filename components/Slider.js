@@ -5,7 +5,7 @@ class Slider extends React.Component {
     super(props);
     this.state = {
       bicycles: data.bicycles,
-      bicycle: data.bicycles[10]
+      bicycle: data.bicycles[5]
     };
   }
 
@@ -30,6 +30,7 @@ class Slider extends React.Component {
     return (
       <div>
         <div id="homePage" className="sliderHomePage">
+          <div className="backgroundImg"></div>
           <button
             id="firstButton"
             onClick={() => this.prevBike()}
@@ -54,15 +55,46 @@ class Slider extends React.Component {
             </div>
           </div>
           <button
+            id="secondButton"
             onClick={() => this.nextBike()}
             disabled={bicycle.index === data.bicycles.length - 1}
           >
             &rarr;
           </button>
+
+          <div
+            style={{
+              width: "120vw",
+              minWidth: "110vw",
+              height: "107vh",
+              minHeight: "1200px",
+              position: "absolute",
+              top: "-400px",
+              left: "0px",
+              paddingBottom: "100%",
+              zIndex: "-5",
+              overflowX: "hidden"
+            }}
+          >
+            <iframe
+              src="https://player.vimeo.com/video/364273341?autoplay=1&loop=1&title=0&byline=0&portrait=0"
+              style={{
+                position: "absolute",
+                top: "0",
+                left: "0",
+                width: "100%",
+                height: "100%"
+              }}
+              frameBorder="0"
+              allow="autoplay; fullscreen"
+              allowFullScreen
+            ></iframe>
+          </div>
+          <script src="https://player.vimeo.com/api/player.js"></script>
         </div>
         <style jsx global>{`
           .cards-slider.active-slide-0 #card-0 {
-            opacity: 1;
+            opacity: 0.9;
             transform: scale(1);
           }
           .cards-slider.active-slide-1 #card-1 {
@@ -149,12 +181,24 @@ class Slider extends React.Component {
             opacity: 1;
             transform: scale(1);
           }
+        `}</style>
+        <style jsx>{`
           .sliderHomePage {
             width: 100%;
             height: 810px;
+            
           }
-        `}</style>
-        <style jsx>{`
+          .backgroundImg{
+              background: url('static/bikes_home/halftone-overlay.png') no-repeat ;
+              background-size: cover;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100vw;
+              min-height: 1000px;
+              height: 105vh;
+              z-index: -1;
+          }
           button {
             width: 80px;
             height: 30px;
@@ -176,7 +220,7 @@ class Slider extends React.Component {
             top: 435px;
             left: 130px;
           }
-          button:last-child {
+          #secondButton {
             top: 435px;
             right: 130px;
           }
@@ -192,16 +236,17 @@ class Slider extends React.Component {
             display: block;
             width: 50%;
             height: 100%;
-            background: linear-gradient(to right, black 95%, rgba(0, 0, 0, 0) 100%);
+            background: linear-gradient(to right, transparent 95%, rgba(0, 0, 0, 0) 100%);
             position: absolute;
             top: 200px;
             left: -500px;
             z-index: 2;
+          
           }
           .col:after{
             left: auto;
             right: -500px;
-            background: linear-gradient(to left, black 95%, rgba(0, 0, 0, 0) 100%); }
+            background: linear-gradient(to left, transparent 95%, rgba(0, 0, 0, 0) 100%); }
           }
 
           .cards-slider {

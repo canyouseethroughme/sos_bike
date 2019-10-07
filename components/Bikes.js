@@ -107,9 +107,13 @@ const Bikes = () => {
           width: 140px;
           height: 40px;
           background: #1c1713 0% 0% no-repeat padding-box;
-          opacity: 0.85;
+          opacity: 0.8;
           display: grid;
           align-items: center;
+        }
+        .bike > span:hover {
+          opacity: 1;
+          transition: 0.3s;
         }
 
         .bike > span > a {

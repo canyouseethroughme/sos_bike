@@ -1,9 +1,21 @@
 import Link from "next/link";
+import Head from "next/head";
 
-const Navbar = props => (
+const Navbar2 = props => (
   <div>
+    <Head>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      ></link>
+    </Head>
     <nav>
       <ul>
+        <Link href="index">
+          <a>
+            <img src="static/logo.png" />
+          </a>
+        </Link>
         <Link href={props.home}>
           <a id="firstChild">Home</a>
         </Link>
@@ -30,36 +42,47 @@ const Navbar = props => (
           </div>
         </div>
 
-        <Link href="index">
-          <a>
-            <img src="static/logo.png" />
-          </a>
-        </Link>
         <Link href={props.whyus}>
           <a id="thirdChild">Why us</a>
         </Link>
         <Link href={props.about}>
           <a id="fourthChild">About</a>
         </Link>
+        <div className="icons">
+          <Link href="https://www.facebook.com/aarhussosbike/">
+            <a target="_blank" className="fa">
+              &#xf09a;
+            </a>
+          </Link>
+          <Link href="https://www.instagram.com/s0sbike/">
+            <a target="_blank" className="fa">
+              &#xf16d;
+            </a>
+          </Link>
+        </div>
       </ul>
     </nav>
+
     <style jsx>{`
-      @import url("https://use.typekit.net/mmi3fys.css");
       nav {
-        width: 640px;
-        height: 140px;
-        padding-top: 50px;
-        margin: auto;
+        width: 100vw;
+        background-color: #1c1713;
+        border-bottom: 5px solid #997f67;
+        position: fixed;
+        z-index: 5;
       }
       nav > ul {
+        width: 1200px;
         height: 90px;
+        margin: auto;
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: 5fr 1fr 1fr 1fr 1fr 1fr;
         align-items: center;
-        justify-items: center;
+        justify-items: left;
       }
 
-      a {
+      nav > ul > a,
+      .dropdown > a {
         font-family: ronnia, sans-serif;
         font-weight: 700;
         font-style: normal;
@@ -68,18 +91,6 @@ const Navbar = props => (
         text-transform: uppercase;
         color: #fafafa;
         letter-spacing: 0;
-      }
-      #firstChild,
-      #secondChild {
-        justify-self: start;
-      }
-      #thirdChild,
-      #fourthChild {
-        justify-self: end;
-      }
-      a:hover {
-        color: #997f67;
-        transition: 0.3s;
       }
 
       i {
@@ -109,12 +120,6 @@ const Navbar = props => (
         border-radius: 6px;
         background: #1c1713 0% 0% no-repeat padding-box;
       }
-
-      .dropdown:hover .dropdownContent {
-        display: grid;
-        align-items: center;
-      }
-
       .dropdownContent > a {
         font-family: Ronnia, regular;
         font-size: 14px;
@@ -128,11 +133,33 @@ const Navbar = props => (
         border-left: 10px solid #bcaa88;
       }
 
-      img {
-        height: 90px;
+      .dropdown:hover .dropdownContent {
+        display: grid;
+        align-items: center;
+      }
+      a {
+        color: #fafafa;
+        text-decoration: none;
+      }
+      nav > ul > a:hover,
+      .dropdown > a:hover,
+      a:hover {
+        color: #997f67;
+        transition: 0.3s;
+      }
+      ul > a > img {
+        width: 90px;
+        height: 60px;
+      }
+      .icons {
+        border-left: 1px solid #997f67;
+        padding-left: 50px;
+      }
+      .icons > a {
+        padding-left: 20px;
       }
     `}</style>
   </div>
 );
 
-export default Navbar;
+export default Navbar2;
