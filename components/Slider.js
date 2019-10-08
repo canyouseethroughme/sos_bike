@@ -62,35 +62,16 @@ class Slider extends React.Component {
             &rarr;
           </button>
 
-          <div
-            style={{
-              width: "120vw",
-              minWidth: "110vw",
-              height: "107vh",
-              minHeight: "1200px",
-              position: "absolute",
-              top: "-400px",
-              left: "0px",
-              paddingBottom: "100%",
-              zIndex: "-5",
-              overflowX: "hidden"
-            }}
-          >
+          <div className="iframeContainer">
             <iframe
-              src="https://player.vimeo.com/video/364273341?autoplay=1&loop=1&title=0&byline=0&portrait=0"
-              style={{
-                position: "absolute",
-                top: "0",
-                left: "0",
-                width: "100%",
-                height: "100%"
-              }}
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/7GmHVV0qWII?rel=1&modestbranding=0&autohide=1&version=3&autoplay=1&loop=1&showinfo=0&controls=0&mute=1&playlist=7GmHVV0qWII"
               frameBorder="0"
-              allow="autoplay; fullscreen"
+              allow="accelerometer; autoplay; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
           </div>
-          <script src="https://player.vimeo.com/api/player.js"></script>
         </div>
         <style jsx global>{`
           .cards-slider.active-slide-0 #card-0 {
@@ -194,10 +175,28 @@ class Slider extends React.Component {
               position: absolute;
               top: 0;
               left: 0;
-              width: 100vw;
-              min-height: 1000px;
-              height: 105vh;
+              min-width: 1800px;   
+              height: 950px;
               z-index: -1;
+          }
+
+          .iframeContainer{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 950px;
+            width: 100vw;
+            min-width: 1800px;
+            overflow: hidden;
+            z-index: -5;
+          }
+          iframe{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 115%; 
+            min-height: 115%;
+            transform: translate(-50%, -50%);
           }
           button {
             width: 80px;

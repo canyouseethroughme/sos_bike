@@ -49,10 +49,10 @@ const About = () => {
         }
         .childContainer {
           width: 600px;
-
           position: relative;
         }
         .mapContainer {
+          width: 720px;
           position: relative;
         }
         h1 {

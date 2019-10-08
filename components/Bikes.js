@@ -25,7 +25,7 @@ const Bikes = () => {
         <div className="containerBikes">
           <div className="bike">
             <img src="static/bikes_assets/new.png" />
-            <Link href="#">
+            <Link href="new-bikes">
               <span>
                 <a>
                   View more <span>&#43;</span>
@@ -36,7 +36,7 @@ const Bikes = () => {
           </div>
           <div className="bike">
             <img src="static/bikes_assets/custom.png" />
-            <Link href="#">
+            <Link href="custom-bikes">
               <span>
                 <a>
                   View more <span>&#43;</span>
@@ -47,7 +47,7 @@ const Bikes = () => {
           </div>
           <div className="bike">
             <img src="static/bikes_assets/retro.png" />
-            <Link href="#">
+            <Link href="retro-bikes">
               <span>
                 <a>
                   View more <span>&#43;</span>
@@ -58,7 +58,7 @@ const Bikes = () => {
           </div>
           <div className="bike">
             <img src="static/bikes_assets/parts.png" />
-            <Link href="#">
+            <Link href="bike-parts">
               <span>
                 <a>
                   View more <span>&#43;</span>

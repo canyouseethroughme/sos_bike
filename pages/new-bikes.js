@@ -1,7 +1,7 @@
 import Bike from "../components/sections/Bike";
 import Navbar2 from "../components/sections/Navbar2";
 
-class retroBikes extends React.Component {
+class newBikes extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,7 +11,7 @@ class retroBikes extends React.Component {
   }
 
   componentDidMount() {
-    fetch("https://sosbike.dk/wordpress/wp-json/wp/v2/retro?per_page=100")
+    fetch("https://sosbike.dk/wordpress/wp-json/wp/v2/new?per_page=100")
       .then(result => result.json())
       .then(result => {
         this.setState({
@@ -26,7 +26,7 @@ class retroBikes extends React.Component {
         return (
           <Bike
             key={index}
-            picture={bike.acf.retro_bike_main_image.url}
+            picture={bike.acf.new_bike_main_image.url}
             bikeName={bike.title.rendered}
             bikePage=""
           />
@@ -49,7 +49,7 @@ class retroBikes extends React.Component {
             <div className="backgroundImg"></div>
             <div className="backgroundSvg"></div>
             <div className="description">
-              <h1>Retro Bikes</h1>
+              <h1>New Bikes</h1>
               <div className="borderTop"></div>
               <p>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
@@ -177,4 +177,4 @@ class retroBikes extends React.Component {
   }
 }
 
-export default retroBikes;
+export default newBikes;

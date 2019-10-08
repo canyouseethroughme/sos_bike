@@ -50,12 +50,12 @@ const Index = () => {
         }
         html {
           scroll-behavior: smooth;
+          overflow-x: hidden;
         }
 
         body {
           background-color: #1c1713;
           border-top: 5px solid #997f67;
-          overflow-x: hidden;
         }
       `}</style>
 
