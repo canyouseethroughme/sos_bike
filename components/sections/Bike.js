@@ -19,13 +19,13 @@ const Bike = props => (
       @import url("https://use.typekit.net/mmi3fys.css");
       .containerBikes {
         width: 100%;
-        margin-bottom: 90px;
+        margin-bottom: 60px;
       }
 
       .bike {
         width: 280px;
         height: 274px;
-        margin-bottom: 60px;
+        margin-bottom: 30px;
         border-top: 5px solid #997f67;
         position: relative;
       }
