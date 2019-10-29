@@ -170,14 +170,15 @@ class Slider extends React.Component {
             
           }
           .backgroundImg{
-              background: url('static/bikes_home/halftone-overlay.png') no-repeat ;
-              background-size: cover;
-              position: absolute;
-              top: 0;
-              left: 0;
-              min-width: 1800px;   
-              height: 950px;
-              z-index: -1;
+            background: url('static/bikes_home/halftone-overlay.png') no-repeat ;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 950px;
+            width: 100vw;
+            min-width: 1800px;
+            z-index: -1;
           }
 
           .iframeContainer{
@@ -192,11 +193,11 @@ class Slider extends React.Component {
           }
           iframe{
             position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 115%; 
-            min-height: 115%;
-            transform: translate(-50%, -50%);
+            top: 58%;
+            left: 58%;
+            min-width: 116%; 
+            min-height: 116%;
+            transform: translate(-58%, -58%);
           }
           button {
             width: 80px;

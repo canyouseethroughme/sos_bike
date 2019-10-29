@@ -52,7 +52,7 @@ const About = () => {
           position: relative;
         }
         .mapContainer {
-          width: 720px;
+          width: 980px;
           position: relative;
         }
         h1 {

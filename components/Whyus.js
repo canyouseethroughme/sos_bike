@@ -90,13 +90,13 @@ const Whyus = () => {
         }
         .cardContainer > div > h2 {
           color: #997f67;
-          font-family: ronnia, regular;
+          font-family: ronnia, sans-serif;
           letter-spacing: 0.76px;
           font-size: 38px;
           margin-bottom: 20px;
         }
         .cardContainer > div > p {
-          font-family: ronnia, regular;
+          font-family: ronnia, sans-serif;
           font-size: 16px;
           font-weight: 300;
           color: #fafafa;

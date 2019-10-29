@@ -11,7 +11,7 @@ const Navbar2 = props => (
     </Head>
     <nav>
       <ul>
-        <Link href="index">
+        <Link href="/">
           <a>
             <img src="static/logo.png" />
           </a>

@@ -51,7 +51,7 @@ const Bike = props => (
       }
       .bike > span > a {
         text-decoration: none;
-        font-family: ronnia, regular;
+        font-family: ronnia, sans-serif;
         letter-spacing: 0.24px;
         color: #fafafa;
         font-weight: 300;
@@ -65,7 +65,7 @@ const Bike = props => (
       .bike > p {
         margin-top: 20px;
         padding-left: 10px;
-        font-family: ronnia, regular;
+        font-family: ronnia, sans-serif;
         font-size: 14px;
         font-weight: 300;
         color: #fafafa;

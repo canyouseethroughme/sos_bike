@@ -1,5 +1,6 @@
 import Bike from "../components/sections/Bike";
 import Navbar2 from "../components/sections/Navbar2";
+import CategoryBikes from "../components/sections/CategoryBikes";
 
 class bikeParts extends React.Component {
   constructor(props) {
@@ -48,16 +49,14 @@ class bikeParts extends React.Component {
           <div id="retroBikes">
             <div className="backgroundImg"></div>
             <div className="backgroundSvg"></div>
-            <div className="description">
-              <h1>Bike Parts</h1>
-              <div className="borderTop"></div>
-              <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+
+            <CategoryBikes
+              category="Bike parts"
+              description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore et dolore magna
                 aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                justo duo dolores et
-              </p>
-            </div>
+                justo duo dolores et"
+            />
             <div className="container">{bikes}</div>
             {!!this.state.bikes &&
               this.state.bikes.length > 12 &&
@@ -93,12 +92,7 @@ class bikeParts extends React.Component {
             grid-template-columns: repeat(4, 1fr);
             justify-items: center;
           }
-          .description {
-            position: relative;
-            height: 320px;
-            width: 100%;
-            margin: auto;
-          }
+
           .backgroundImg {
             position: absolute;
             top: 90px;
@@ -119,34 +113,17 @@ class bikeParts extends React.Component {
             width: 100vw;
             height: 320px;
             background-image: url("static/bikes_assets/background-svg.svg");
+            background: linear-gradient(
+              to bottom,
+              rgba(28, 23, 19, 0) 0%,
+              rgba(28, 23, 19, 0.8) 51%,
+              rgba(28, 23, 19, 1) 75%
+            );
             object-fit: cover;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: 50% 50%;
             z-index: -3;
-          }
-          h1 {
-            padding-top: 81px;
-            font-size: 46px;
-            font-family: Farnham Text;
-            color: #fafafa;
-            letter-spacing: 1px;
-            font-weight: 400;
-          }
-          .borderTop {
-            margin-top: 30px;
-            position: absolute;
-            border-bottom: 5px solid #997f67;
-            left: 0;
-            right: 90%;
-          }
-          p {
-            width: 895px;
-            padding-top: 60px;
-            font-family: ronnia, regular;
-            font-size: 16px;
-            font-weight: 300;
-            color: #fafafa;
           }
 
           .buttonContainer {

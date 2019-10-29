@@ -30,7 +30,7 @@ const Navbar = props => (
           </div>
         </div>
 
-        <Link href="index">
+        <Link href="/">
           <a>
             <img src="static/logo.png" />
           </a>
