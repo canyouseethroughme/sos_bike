@@ -48,6 +48,12 @@ const Navbar2 = props => (
         <Link href={props.about}>
           <a id="fourthChild">About</a>
         </Link>
+        <Link href={props.blog}>
+          <a id="fifthChild">Blog</a>
+        </Link>
+        <Link href={props.recommended}>
+          <a id="sixthChild">Recommended</a>
+        </Link>
         <div className="icons">
           <Link href="https://www.facebook.com/aarhussosbike/">
             <a target="_blank" className="fa">
@@ -76,7 +82,7 @@ const Navbar2 = props => (
         height: 90px;
         margin: auto;
         display: grid;
-        grid-template-columns: 5fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 4fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         align-items: center;
         justify-items: left;
       }
@@ -153,10 +159,13 @@ const Navbar2 = props => (
       }
       .icons {
         border-left: 1px solid #997f67;
-        padding-left: 50px;
+        padding-left: 30px;
       }
-      .icons > a {
-        padding-left: 20px;
+      .icons > a:last-child {
+        padding-left: 10px;
+      }
+      #sixthChild {
+        margin-right: 30px;
       }
     `}</style>
   </div>

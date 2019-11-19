@@ -1,6 +1,9 @@
 import Bike from "../components/sections/Bike";
 import Navbar2 from "../components/sections/Navbar2";
 import CategoryBikes from "../components/sections/CategoryBikes";
+import Header from "../components/sections/Header";
+
+import fetch from "isomorphic-unfetch";
 
 class retroBikes extends React.Component {
   constructor(props) {
@@ -27,15 +30,16 @@ class retroBikes extends React.Component {
         return (
           <Bike
             key={index}
-            picture={bike.acf.retro_bike_main_image.url}
             bikeName={bike.title.rendered}
-            bikePage=""
+            id={bike.id}
+            picture={bike.acf.main_image.url}
           />
         );
       });
     return (
       <div>
         <div>
+          <Header />
           <Navbar2
             home="/"
             shop="#shopPage"
@@ -153,5 +157,80 @@ class retroBikes extends React.Component {
     );
   }
 }
+
+// class retroBikes extends React.Component {
+//   static async getInitialProps() {
+//     const res = await fetch(
+//       "https://sosbike.dk/wordpress/wp-json/wp/v2/retro?per_page=100"
+//     );
+//     const data = await res.json();
+//     return {
+//       bikes: data.map(entry => entry)
+//     };
+//   }
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       showAll: false
+//     };
+//   }
+
+//   render() {
+//     let bikes = this.props.bikes
+//       .slice(0, this.state.showAll ? undefined : 12)
+//       .map((bike, index) => {
+//         return (
+//           <Bike
+//             key={index}
+//             picture={bike.acf.retro_bike_main_image.url}
+//             bikeName={bike.title.rendered}
+//             id={bike.id}
+//           />
+//         );
+//       });
+//     return (
+//       <div>
+//         <Header />
+//         <div>
+//           <div>
+//             <Navbar2
+//               home="/"
+//               shop="#shopPage"
+//               custom="custom-bikes"
+//               retro="retro-bikes"
+//               new="new-bikes"
+//               parts="bike-parts"
+//               whyus="/#whyusPage"
+//               about="#aboutPage"
+//             />
+//             <div id="retroBikes">
+//               <div className="backgroundImg"></div>
+//               <div className="backgroundSvg"></div>
+
+//               <CategoryBikes
+//                 category="Retro Bikes"
+//                 description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+//                 diam nonumy eirmod tempor invidunt ut labore et dolore magna
+//                 aliquyam erat, sed diam voluptua. At vero eos et accusam et
+//                 justo duo dolores et"
+//               />
+//               <div className="container">{bikes}</div>
+//               {!!this.props.bikes &&
+//                 this.props.bikes.length > 12 &&
+//                 !this.state.showAll && (
+//                   <div className="buttonContainer">
+//                     <button onClick={() => this.setState({ showAll: true })}>
+//                       Show more
+//                     </button>
+//                   </div>
+//                 )}
+//             </div>
+//           </div>
+
+//         </div>
+//       </div>
+//     );
+//   }
+// }
 
 export default retroBikes;

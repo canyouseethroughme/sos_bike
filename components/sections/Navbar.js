@@ -7,10 +7,13 @@ const Navbar = props => (
         <Link href={props.home}>
           <a id="firstChild">Home</a>
         </Link>
+        <Link href={props.blog}>
+          <a id="secondChild">Blog</a>
+        </Link>
 
         <div className="dropdown">
           <Link href={props.shop}>
-            <a id="secondChild">
+            <a id="thirdChild">
               Shop <i className="downArrow"></i>
             </a>
           </Link>
@@ -36,17 +39,20 @@ const Navbar = props => (
           </a>
         </Link>
         <Link href={props.whyus}>
-          <a id="thirdChild">Why us</a>
+          <a id="fourthChild">Why us</a>
         </Link>
         <Link href={props.about}>
-          <a id="fourthChild">About</a>
+          <a id="fifthChild">About</a>
+        </Link>
+        <Link href={props.recommended}>
+          <a id="sixthChild">Recommended</a>
         </Link>
       </ul>
     </nav>
     <style jsx>{`
       @import url("https://use.typekit.net/mmi3fys.css");
       nav {
-        width: 640px;
+        width: 855px;
         height: 140px;
         padding-top: 50px;
         margin: auto;
@@ -54,7 +60,7 @@ const Navbar = props => (
       nav > ul {
         height: 90px;
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(7, 1fr);
         align-items: center;
         justify-items: center;
       }
@@ -69,14 +75,7 @@ const Navbar = props => (
         color: #fafafa;
         letter-spacing: 0;
       }
-      #firstChild,
-      #secondChild {
-        justify-self: start;
-      }
-      #thirdChild,
-      #fourthChild {
-        justify-self: end;
-      }
+
       a:hover {
         color: #997f67;
         transition: 0.3s;
@@ -95,7 +94,7 @@ const Navbar = props => (
       .dropdown {
         position: relative;
         display: grid;
-        justify-self: start;
+        justify-self: center;
       }
 
       .dropdownContent {

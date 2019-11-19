@@ -5,9 +5,10 @@ const Bike = props => (
     <div className="containerBikes">
       <div className="bike">
         <img src={props.picture} />
-        <Link href={props.bikePage}>
+        <Link href="/p/[id]" as={`${props.id}`}>
           <span>
             <a>
+              {props.id}
               View more <span>&#43;</span>
             </a>
           </span>
