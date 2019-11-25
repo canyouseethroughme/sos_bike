@@ -73,8 +73,7 @@ class SingleProductSlideshow extends React.Component {
             </div>
             <img
               src={this.props.bikeInfo.acf[this.state.selectedImage].url}
-              height={702}
-              width={820}
+              style={{ objectFit: "contain", height: 700 }}
             />
             <div>
               <div className="arrows">
