@@ -8,7 +8,6 @@ const Card = ({ bicycle }) => {
         <img src={picture} alt="bike" />
         <div className="details">
           <p className="type">{type}</p>
-          <p className="description">{description}</p>
           <a href={link}>
             <button>View</button>
           </a>
@@ -49,14 +48,6 @@ const Card = ({ bicycle }) => {
           text-transform: uppercase;
         }
 
-        .description {
-          margin: 15px 15px 0;
-          font-family: ronnia, sans-serif;
-          font-weight: 300;
-          font-size: 12px;
-          letter-spacing: 0;
-          color: #fafafa;
-        }
         button {
           margin: 25px auto;
           width: 120px;

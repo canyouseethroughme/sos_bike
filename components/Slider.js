@@ -192,9 +192,9 @@ class Slider extends React.Component {
             z-index: -5;
           }
           iframe{
-            position: absolute;
+            position: relative;
             top: 58%;
-            left: 58%;
+            left: 48%;
             min-width: 116%; 
             min-height: 116%;
             transform: translate(-58%, -58%);
@@ -250,7 +250,7 @@ class Slider extends React.Component {
           }
 
           .cards-slider {
-            top: 130px;
+            top: 80px;
             position: relative;
             margin: 0 auto;
             max-width: 280px;
