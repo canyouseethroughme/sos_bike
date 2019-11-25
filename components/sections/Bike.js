@@ -5,7 +5,12 @@ const Bike = props => (
     <div className="containerBikes">
       <div className="bike">
         <img src={props.picture} />
-        <Link href="/p/[id]" as={`${props.id}`}>
+        <Link
+          href={{
+            pathname: "/bike",
+            query: { type: props.type, id: props.id }
+          }}
+        >
           <span>
             <a>
               {props.id}
