@@ -194,7 +194,7 @@ class Slider extends React.Component {
           iframe{
             position: relative;
             top: 58%;
-            left: 48%;
+            left: 55%;
             min-width: 116%; 
             min-height: 116%;
             transform: translate(-58%, -58%);
