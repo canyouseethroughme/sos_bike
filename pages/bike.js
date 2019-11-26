@@ -46,11 +46,25 @@ class Bike extends React.Component {
                       height={496}
                       width={580}
                     />
-                    <div className="contactInformation">
+                    <div className="modalContactInformation">
                       {this.state.bikeType === "retro" && <p>Retro bikes</p>}
                       {this.state.bikeType === "new" && <p>New bikes</p>}
-
-                      <p></p>
+                      <h1>{this.state.bikeInfo.title.rendered}</h1>
+                      <p>{this.state.bikeInfo.acf.description}</p>
+                      <div className="modalContact">
+                        <div className="modalContactLabels">
+                          <p>Contact: </p>
+                          <p>Phone: </p>
+                          <p className="availability">Availability:</p>
+                        </div>
+                        <div className="modalContactInfo">
+                          <p>Petre Inspirescu</p>
+                          <p>+45 00 00 00 00 </p>
+                          <p className="availability">
+                            9:00 - 17:00 / MON til FRI
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -126,7 +140,6 @@ class Bike extends React.Component {
             width: 100vw;
           }
           .modalInformation {
-            // margin-left: 130px;
             background-color: #1c1713;
             border-bottom: 5px solid #997f67;
             width: 1200px;
@@ -134,11 +147,58 @@ class Bike extends React.Component {
             -webkit-box-shadow: 0px 0px 30px -25px rgba(255, 255, 255, 1);
             -moz-box-shadow: 0px 0px 30px -25px rgba(255, 255, 255, 1);
             box-shadow: 0px 0px 30px -25px rgba(255, 255, 255, 1);
+            display: flex;
+            flex-direction: row;
           }
           .modalInformation > img {
             margin-left: 40px;
             margin-top: 40px;
             margin-bottom: 45px;
+          }
+          .modalContactInformation {
+            width: 470px;
+            margin-left: 50px;
+          }
+          .modalContactInformation > p:first-of-type {
+            color: #fafafa;
+            font-family: ronnia, sans-serif;
+            font-size: 16px;
+            font-weight: lighter;
+            margin-top: 40px;
+          }
+          .modalContactInformation > h1 {
+            font-family: ronnia, sans-serif;
+            color: #fafafa;
+            font-size: 36px;
+            font-weight: bold;
+            margin-top: 20px;
+          }
+          .modalContactInformation > p {
+            font-familt: ronnia, sans-serif;
+            font-size: 16px;
+            color: #fafafa;
+            margin-top: 40px;
+          }
+          .modalContact {
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+            align-items: center;
+          }
+          .availability {
+            margin-top: 60px;
+          }
+          .modalContactLabels > p {
+            font-family: ronnia, sans-serif;
+            color: #fafafa;
+          }
+          .modalContactInfo {
+            margin-left: 40px;
+          }
+          .modalContactInfo > p {
+            font-family: ronnia, sans-serif;
+            color: #fafafa;
+            font-weight: lighter;
           }
           .productContainer {
             // margin-left: 130px;
@@ -196,7 +256,6 @@ class Bike extends React.Component {
           .productInfo > table > tbody > tr > td {
             background-color: #1f1f1f;
           }
-
           .getOfferButton {
             outline: none;
             width: 160px;
@@ -216,7 +275,6 @@ class Bike extends React.Component {
             color: #997f67;
             transition: 0.3s;
           }
-
           .warrantyP {
             margin-top: 60px;
             font-weight: lighter;
