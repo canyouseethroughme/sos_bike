@@ -3,6 +3,7 @@ import Navbar2 from "../components/sections/Navbar2";
 import Header from "../components/sections/Header";
 import ReactModal from "react-modal";
 import SingleProductSlideshow from "../components/sections/SingleProductSlideshow";
+import Footer from "../components/sections/Footer";
 
 class Bike extends React.Component {
   constructor() {
@@ -30,71 +31,79 @@ class Bike extends React.Component {
           <Header />
           <Navbar2 />
           {this.state.bikeInfo && (
-            <div>
+            <div className="productContainer">
               <ReactModal
                 className="modal"
                 isOpen={this.state.modalOpen}
                 onRequestClose={this.closeModal}
-                areaHideApp={false}
+                ariaHideApp={false}
+                shouldFocusAfterRender={false}
               >
                 <div className="modalContainer">
-                  <img
-                    src={this.state.bikeInfo.acf.main_image.url}
-                    height={496}
-                    width={580}
-                  />
+                  <div className="modalInformation">
+                    <img
+                      src={this.state.bikeInfo.acf.main_image.url}
+                      height={496}
+                      width={580}
+                    />
+                    <div className="contactInformation">
+                      {this.state.bikeType === "retro" && <p>Retro bikes</p>}
+                      {this.state.bikeType === "new" && <p>New bikes</p>}
+
+                      <p></p>
+                    </div>
+                  </div>
                 </div>
               </ReactModal>
-              <div className="productContainer">
-                <div className="product">
-                  <SingleProductSlideshow bikeInfo={this.state.bikeInfo} />
-                  <div className="productInfo">
-                    {this.state.bikeType === "retro" && <p>Retro bikes</p>}
-                    {this.state.bikeType === "new" && <p>New bikes</p>}
-                    <h1>
-                      <b>{this.state.bikeInfo.title.rendered}</b>
-                    </h1>
-                    <p>{this.state.bikeInfo.acf.description}</p>
-                    <table>
-                      <thead>
-                        <tr>
-                          <th>Brand</th>
-                          <th>Model</th>
-                          <th>Year</th>
-                          <th>Gears</th>
-                          <th>Breaks</th>
-                          <th>Frame</th>
-                          <th>Wheels</th>
-                          <th>Tires</th>
-                          <th>Other</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>{this.state.bikeInfo.acf.brand}</td>
-                          <td>{this.state.bikeInfo.acf.model}</td>
-                          <td>{this.state.bikeInfo.acf.year}</td>
-                          <td>{this.state.bikeInfo.acf.gears}</td>
-                          <td>{this.state.bikeInfo.acf.breaks}</td>
-                          <td>{this.state.bikeInfo.acf.frame}</td>
-                          <td>{this.state.bikeInfo.acf.wheels}</td>
-                          <td>{this.state.bikeInfo.acf.tires}</td>
-                          <td>{this.state.bikeInfo.acf.other_things}</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <button className="getOfferButton" onClick={this.openModal}>
-                      Get offer
-                    </button>
-                    <p className="warrantyP">
-                      *Warranty - {this.state.bikeInfo.acf.warranty} years
-                    </p>
-                  </div>
+              <div className="product">
+                <SingleProductSlideshow bikeInfo={this.state.bikeInfo} />
+                <div className="productInfo">
+                  {this.state.bikeType === "retro" && <p>Retro bikes</p>}
+                  {this.state.bikeType === "new" && <p>New bikes</p>}
+                  <h1>
+                    <b>{this.state.bikeInfo.title.rendered}</b>
+                  </h1>
+                  <p>{this.state.bikeInfo.acf.description}</p>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Brand</th>
+                        <th>Model</th>
+                        <th>Year</th>
+                        <th>Gears</th>
+                        <th>Breaks</th>
+                        <th>Frame</th>
+                        <th>Wheels</th>
+                        <th>Tires</th>
+                        <th>Other</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>{this.state.bikeInfo.acf.brand}</td>
+                        <td>{this.state.bikeInfo.acf.model}</td>
+                        <td>{this.state.bikeInfo.acf.year}</td>
+                        <td>{this.state.bikeInfo.acf.gears}</td>
+                        <td>{this.state.bikeInfo.acf.breaks}</td>
+                        <td>{this.state.bikeInfo.acf.frame}</td>
+                        <td>{this.state.bikeInfo.acf.wheels}</td>
+                        <td>{this.state.bikeInfo.acf.tires}</td>
+                        <td>{this.state.bikeInfo.acf.other_things}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <button className="getOfferButton" onClick={this.openModal}>
+                    Get offer
+                  </button>
+                  <p className="warrantyP">
+                    *Warranty - {this.state.bikeInfo.acf.warranty} years
+                  </p>
                 </div>
               </div>
             </div>
           )}
         </div>
+        <Footer />
         <style jsx global>{`
           * {
             margin: 0;
@@ -108,17 +117,33 @@ class Bike extends React.Component {
         <style jsx>{`
           .modalContainer {
             margin-top: 140px;
-            display: flex;
             align-items: center;
-            justify-content: space-around;
             text-decoration: none;
             outline: none;
-            border-bottom: 3px solid #997f67;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 100vw;
+          }
+          .modalInformation {
+            // margin-left: 130px;
+            background-color: #1c1713;
+            border-bottom: 5px solid #997f67;
+            width: 1200px;
+            height: 586px;
+            -webkit-box-shadow: 0px 0px 30px -25px rgba(255, 255, 255, 1);
+            -moz-box-shadow: 0px 0px 30px -25px rgba(255, 255, 255, 1);
+            box-shadow: 0px 0px 30px -25px rgba(255, 255, 255, 1);
+          }
+          .modalInformation > img {
+            margin-left: 40px;
+            margin-top: 40px;
+            margin-bottom: 45px;
           }
           .productContainer {
             // margin-left: 130px;
             // margin-right: 130px;
-            position: absolute;
+            position: fixef;
             width: 100vw;
             padding-top: 190px;
             display: flex;
