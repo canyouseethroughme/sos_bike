@@ -29,7 +29,17 @@ class Bike extends React.Component {
       <div>
         <div>
           <Header />
-          <Navbar2 />
+          <Navbar2
+            home="/"
+            shop="#shopPage"
+            custom="custom-bikes"
+            retro="retro-bikes"
+            new="new-bikes"
+            parts="bike-parts"
+            whyus="#whyusPage"
+            about="#aboutPage"
+            recommended="recommended"
+          />
           {this.state.bikeInfo && (
             <div className="productContainer">
               <ReactModal
@@ -203,7 +213,6 @@ class Bike extends React.Component {
           .productContainer {
             // margin-left: 130px;
             // margin-right: 130px;
-            position: fixef;
             width: 100vw;
             padding-top: 190px;
             display: flex;
