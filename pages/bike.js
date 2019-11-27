@@ -211,8 +211,6 @@ class Bike extends React.Component {
             font-weight: lighter;
           }
           .productContainer {
-            // margin-left: 130px;
-            // margin-right: 130px;
             width: 100vw;
             padding-top: 190px;
             display: flex;
