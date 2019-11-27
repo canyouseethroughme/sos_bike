@@ -14,7 +14,7 @@ const Footer = props => (
             <label className="sectionLabel">Legal</label>
             <div className="sectionLinks">
               <a href="google.com">Cookies</a>
-              <a href="google.com">Terms of Service</a>
+              <a href="terms-of-service">Terms of Service</a>
               <a href="google.com">Privacy policy</a>
             </div>
           </div>
