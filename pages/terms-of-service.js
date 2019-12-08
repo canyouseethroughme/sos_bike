@@ -107,12 +107,21 @@ const Recommended = props => (
     `}</style>
     <style jsx>{`
       .fullTitleContainer {
+        position: relative;
         width: 100vw;
         height: 325px;
-        padding-top: 95px;
-        background-color: black;
+        top: 91px;
         display: flex;
         justify-content: center;
+        background-image: linear-gradient(
+            to bottom,
+            rgba(28, 23, 19, 0) 0%,
+            rgba(28, 23, 19, 0.8) 51%,
+            rgba(28, 23, 19, 1) 75%
+          ),
+          url("../static/leagal-notice.png");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
       }
       .titleContainer {
         color: red;

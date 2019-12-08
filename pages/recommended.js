@@ -87,12 +87,21 @@ const Recommended = props => (
     `}</style>
     <style jsx>{`
       .fullTitleContainer {
+        position: relative;
         width: 100vw;
         height: 325px;
-        padding-top: 95px;
+        top: 91px;
         background-color: black;
         display: flex;
         justify-content: center;
+        background-image: linear-gradient(
+            to bottom,
+            rgba(28, 23, 19, 0) 0%,
+            rgba(28, 23, 19, 0.8) 51%,
+            rgba(28, 23, 19, 1) 75%
+          ),
+          url("../static/recommended/recommended.png");
+        background-size: cover;
       }
       .titleContainer {
         color: red;
