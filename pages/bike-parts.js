@@ -1,6 +1,7 @@
 import Bike from "../components/sections/Bike";
 import Navbar2 from "../components/sections/Navbar2";
 import CategoryBikes from "../components/sections/CategoryBikes";
+import Footer from "../components/sections/Footer";
 
 class bikeParts extends React.Component {
   constructor(props) {
@@ -69,6 +70,7 @@ class bikeParts extends React.Component {
               )}
           </div>
         </div>
+        <Footer />
         <style jsx global>{`
           * {
             margin: 0;

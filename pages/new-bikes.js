@@ -1,6 +1,7 @@
 import Bike from "../components/sections/Bike";
 import Navbar2 from "../components/sections/Navbar2";
 import CategoryBikes from "../components/sections/CategoryBikes";
+import Footer from "../components/sections/Footer";
 
 class newBikes extends React.Component {
   constructor(props) {
@@ -21,18 +22,21 @@ class newBikes extends React.Component {
       });
   }
   render() {
-    let bikes = this.state.bikes
-      .slice(0, this.state.showAll ? undefined : 12)
-      .map((bike, index) => {
-        return (
-          <Bike
-            key={index}
-            picture={bike.acf.new_bike_main_image.url}
-            bikeName={bike.title.rendered}
-            bikePage=""
-          />
-        );
-      });
+    let bikes;
+    if (this.state.bikes.length > 0) {
+      bikes = this.state.bikes
+        .slice(0, this.state.showAll ? undefined : 12)
+        .map((bike, index) => {
+          return (
+            <Bike
+              key={index}
+              picture={bike.acf.new_bike_main_image.url}
+              bikeName={bike.title.rendered}
+              bikePage=""
+            />
+          );
+        });
+    }
     return (
       <div>
         <div>
@@ -69,6 +73,7 @@ class newBikes extends React.Component {
               )}
           </div>
         </div>
+        <Footer />
         <style jsx global>{`
           * {
             margin: 0;

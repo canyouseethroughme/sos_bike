@@ -1,6 +1,7 @@
 import Navbar2 from "../components/sections/Navbar2";
 import Header from "../components/sections/Header";
 import Footer from "../components/sections/Footer";
+import CategoryBikes from "../components/sections/CategoryBikes";
 
 const Recommended = props => (
   <div>
@@ -19,14 +20,7 @@ const Recommended = props => (
       />
       <div className="fullTitleContainer">
         <div className="titleContainer">
-          <h1>Recommended by Swapfiets</h1>
-          <div className="line"></div>
-          <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et
-          </p>
+          <CategoryBikes category="Recommended" />
         </div>
       </div>
       <div className="recommendedPageContainer">
@@ -44,31 +38,10 @@ const Recommended = props => (
           <div className="textContainer">
             <h1>A love letter</h1>
             <p>
-              Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-              aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
-              duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-              takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor
-              sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-              tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-              voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-              Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-              dolor sit amet. 1.2. Dolor Sit amet Lorem ipsum dolor sit amet,
-              consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-              invidunt ut labore et dolore magna aliquyam erat, sed diam
-              voluptua. At veres et ea rebum. Stet clita aliquyam erat, sed diam
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua. At vero eos et accusam et justo duo
-              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-              sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-              amet, consetasd gubergren, no sea takimata siquyam erat, sed diam
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed dt Lorem ipsum dolor sit amet. Lorem ipsum dolor sit am
+              Radu, the mechanic from SoSBike, is not just a bike mechanic! Radu
+              is THE bike mechanic! He is super fast and doesn't compromise on
+              the quality! You know it’s 100% okay, when he has repaired or made
+              something for you! I will recommend Radu any day of the week!
             </p>
           </div>
         </div>
@@ -104,29 +77,9 @@ const Recommended = props => (
         background-size: cover;
       }
       .titleContainer {
-        color: red;
         width: 1200px;
       }
-      .titleContainer > h1 {
-        margin-top: 80px;
-        font-family: farnham text;
-        color: #fafafa;
-        font-weight: bold;
-        font-size: 46px;
-      }
-      .line {
-        width: 80px;
-        height: 5px;
-        margin-top: 30px;
-        border-top: 5px solid #997f67;
-      }
-      .titleContainer > p {
-        font-family: Ronnia, sans-serif;
-        font-size: 16px;
-        color: #fafafa;
-        margin-top: 30px;
-        width: 895px;
-      }
+
       .recommendedPageContainer {
         width: 100vw;
         display: flex;
@@ -164,6 +117,7 @@ const Recommended = props => (
       .textContainer > p {
         font-family: ronnia. sans-serif;
         font-size: 16px;
+        width: 70%;
         margin-bottom: 40px;
       }
     `}</style>

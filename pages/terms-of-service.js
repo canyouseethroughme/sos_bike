@@ -1,6 +1,7 @@
 import Navbar2 from "../components/sections/Navbar2";
 import Header from "../components/sections/Header";
 import Footer from "../components/sections/Footer";
+import CategoryBikes from "../components/sections/CategoryBikes";
 
 const Recommended = props => (
   <div>
@@ -20,13 +21,13 @@ const Recommended = props => (
     </div>
     <div className="fullTitleContainer">
       <div className="titleContainer">
-        <h1>Legal notice</h1>
-        <div className="line"></div>
-        <p>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et
-        </p>
+        <CategoryBikes
+          CategoryBikes="Terms of Service"
+          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                justo duo dolores et"
+        />
       </div>
     </div>
     <div className="tofContainer">

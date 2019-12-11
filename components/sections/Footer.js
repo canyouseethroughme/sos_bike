@@ -18,27 +18,24 @@ const Footer = props => (
               <a href="google.com">Privacy policy</a>
             </div>
           </div>
+          <div className="blogContainer">
+            <label className="sectionLabel">Blog</label>
+            <div className="sectionLinks">
+              <a href="news">News</a>
+            </div>
+          </div>
           <div className="bikesContainer">
             <label className="sectionLabel">Bikes</label>
             <div className="sectionLinks">
-              <a href="google.com">Retro</a>
+              <a href="/retro-bike">Retro</a>
               <a href="google.com">Custom</a>
               <a href="google.com">New</a>
               <a href="google.com">Parts</a>
             </div>
           </div>
-          <div className="blogContainer">
-            <label className="sectionLabel">Blog</label>
-            <div className="sectionLinks">
-              <a href="news">News</a>
-              <a href="google.com">Good to know</a>
-              <a href="google.com">Mentions</a>
-            </div>
-          </div>
           <div className="aboutContainer">
             <label className="sectionLabel">About</label>
             <div className="sectionLinks">
-              <a href="google.com">Questions</a>
               <a href="google.com">Story</a>
             </div>
           </div>

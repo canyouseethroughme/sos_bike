@@ -5,15 +5,29 @@ import Slider from "../components/Slider";
 import Bikes from "../components/Bikes";
 import Whyus from "../components/Whyus";
 import About from "../components/About";
+import Footer from "../components/sections/Footer";
+
+import Link from "next/link";
 
 class Index extends React.Component {
   state = {
     hasAnimation: false,
-    active: 0
+    active: 0,
+    news: []
   };
 
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
+    fetch(
+      "https://sosbike.dk/wordpress/wp-json/wp/v2/news_and_stuff?per_page=100"
+    )
+      .then(res => res.json())
+      .then(jsonRes => {
+        console.log(jsonRes);
+        this.setState({ news: jsonRes }, () => {
+          console.log(this.state.news);
+        });
+      });
   }
 
   handleScroll = () => {
@@ -29,11 +43,19 @@ class Index extends React.Component {
   render() {
     const { active } = this.state;
     const { hasAnimation } = this.state;
+    const newsImgs = this.state.news.map(item => {
+      return (
+        <div>
+          <Link href="/news">
+            <img src={item.acf.news_image.url} height={206} width={206} />
+          </Link>
+        </div>
+      );
+    });
 
     return (
       <div>
         <Header />
-
         <div className="content">
           <Navbar
             home="/"
@@ -57,10 +79,13 @@ class Index extends React.Component {
               about="#aboutPage"
             />
           </div>
-          <Slider />
-          <Bikes />
-          <Whyus />
-          <About />
+          <div>
+            <Slider />
+            <Bikes />
+            <Whyus />
+            <About />
+            <Footer />
+          </div>
         </div>
         <style jsx global>{`
           * {
