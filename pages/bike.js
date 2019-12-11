@@ -302,9 +302,7 @@ class Bike extends React.Component {
       )
         .then(res => res.json())
         .then(jsonRes => {
-          this.setState({ bikeInfo: jsonRes }, () => {
-            console.log(this.state.bikeInfo);
-          });
+          this.setState({ bikeInfo: jsonRes });
         });
     });
   }

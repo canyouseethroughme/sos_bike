@@ -7,14 +7,13 @@ const Bike = props => (
         <img src={props.picture} />
         <Link
           href={{
-            pathname: "/bike",
+            pathname: props.pageRequested,
             query: { type: props.type, id: props.id }
           }}
         >
           <span>
             <a>
-              {props.id}
-              View more <span>&#43;</span>
+              {props.id} View more<span>&#43;</span>
             </a>
           </span>
         </Link>

@@ -34,6 +34,7 @@ class retroBikes extends React.Component {
             id={bike.id}
             picture={bike.acf.main_image.url}
             type="retro"
+            pageRequested="/bike"
           />
         );
       });

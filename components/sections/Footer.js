@@ -30,7 +30,7 @@ const Footer = props => (
           <div className="blogContainer">
             <label className="sectionLabel">Blog</label>
             <div className="sectionLinks">
-              <a href="google.com">News</a>
+              <a href="news">News</a>
               <a href="google.com">Good to know</a>
               <a href="google.com">Mentions</a>
             </div>
