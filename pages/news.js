@@ -22,7 +22,7 @@ class News extends React.Component {
         this.setState({ news: jsonRes }, () => {
           console.log(this.state.news);
         });
-      });
+    ╛  });
   }
   render() {
     let newsComponents = this.state.news.map((news, index) => {

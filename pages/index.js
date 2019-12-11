@@ -79,14 +79,12 @@ class Index extends React.Component {
               about="#aboutPage"
             />
           </div>
-          <div>
-            <Slider />
-            <Bikes />
-            <Whyus />
-            <About />
-            <Footer />
-          </div>
+          <Slider />
+          <Bikes />
+          <Whyus />
+          <About />
         </div>
+        <Footer />
         <style jsx global>{`
           * {
             box-sizing: border-box;
