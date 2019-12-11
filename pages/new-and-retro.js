@@ -33,7 +33,7 @@ class retroBikes extends React.Component {
             bikeName={bike.title.rendered}
             id={bike.id}
             picture={bike.acf.main_image.url}
-            type="retro"
+            type="new and retro"
             pageRequested="/bike"
           />
         );
@@ -46,18 +46,19 @@ class retroBikes extends React.Component {
             home="/"
             shop="#shopPage"
             custom="custom-bikes"
-            retro="retro-bikes"
+            retro="new-and-retro"
             new="new-bikes"
             parts="bike-parts"
             whyus="#whyusPage"
             about="#aboutPage"
+            recommended="recommended"
           />
           <div id="retroBikes">
             <div className="backgroundImg"></div>
             <div className="backgroundSvg"></div>
 
             <CategoryBikes
-              category="Retro Bikes"
+              category="New and Retro Bikes"
               description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore et dolore magna
                 aliquyam erat, sed diam voluptua. At vero eos et accusam et

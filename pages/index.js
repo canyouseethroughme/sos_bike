@@ -61,22 +61,24 @@ class Index extends React.Component {
             home="/"
             shop="#shopPage"
             custom="custom-bikes"
-            retro="retro-bikes"
+            retro="new-and-retro"
             new="new-bikes"
             parts="bike-parts"
             whyus="#whyusPage"
             about="#aboutPage"
+            recommended="recommended"
           />
           <div id={active && "scrolled"} className="navbarSecond">
             <Navbar2
               home="/"
               shop="#shopPage"
               custom="custom-bikes"
-              retro="retro-bikes"
+              retro="new-and-retro"
               new="new-bikes"
               parts="bike-parts"
               whyus="#whyusPage"
               about="#aboutPage"
+              recommended="recommended"
             />
           </div>
           <Slider />

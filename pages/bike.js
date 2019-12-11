@@ -33,7 +33,7 @@ class Bike extends React.Component {
             home="/"
             shop="#shopPage"
             custom="custom-bikes"
-            retro="retro-bikes"
+            retro="new-and-retro"
             new="new-bikes"
             parts="bike-parts"
             whyus="#whyusPage"
@@ -82,7 +82,9 @@ class Bike extends React.Component {
               <div className="product">
                 <SingleProductSlideshow bikeInfo={this.state.bikeInfo} />
                 <div className="productInfo">
-                  {this.state.bikeType === "retro" && <p>Retro bikes</p>}
+                  {this.state.bikeType === "new and retro" && (
+                    <p>New and Retro bikes</p>
+                  )}
                   {this.state.bikeType === "new" && <p>New bikes</p>}
                   <h1>
                     <b>{this.state.bikeInfo.title.rendered}</b>
