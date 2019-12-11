@@ -57,7 +57,9 @@ class Bike extends React.Component {
                       width={580}
                     />
                     <div className="modalContactInformation">
-                      {this.state.bikeType === "retro" && <p>Retro bikes</p>}
+                      {this.state.bikeType === "new and retro" && (
+                        <p>New & Retro bikes</p>
+                      )}
                       {this.state.bikeType === "new" && <p>New bikes</p>}
                       <h1>{this.state.bikeInfo.title.rendered}</h1>
                       <p>{this.state.bikeInfo.acf.description}</p>
@@ -296,7 +298,10 @@ class Bike extends React.Component {
   componentDidMount() {
     const url = window.location;
     const urlObject = new URL(url);
-    const bikeType = urlObject.searchParams.get("type");
+    let bikeType = urlObject.searchParams.get("type");
+    if (bikeType === "new and retro") {
+      bikeType = "retro";
+    }
     const bikeId = urlObject.searchParams.get("id");
     this.setState({ bikeType, bikeId }, () => {
       fetch(
