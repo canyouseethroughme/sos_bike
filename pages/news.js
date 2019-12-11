@@ -22,7 +22,7 @@ class News extends React.Component {
         this.setState({ news: jsonRes }, () => {
           console.log(this.state.news);
         });
-    ╛  });
+      });
   }
   render() {
     let newsComponents = this.state.news.map((news, index) => {
@@ -106,9 +106,7 @@ class News extends React.Component {
           }
           .newsContainer {
             max-width: 1200px;
-            // display: flex;
-            // flex-wrap: wrap;
-            // justify-content: space-between;
+
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             width: 100%;
