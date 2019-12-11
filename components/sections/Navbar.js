@@ -22,7 +22,7 @@ const Navbar = props => (
               <a>Custom bikes</a>
             </Link>
             <Link href={props.retro}>
-              <a>New and Retro bikes</a>
+              <a>New & Retro bikes</a>
             </Link>
             <Link href={props.new}>
               <a>New bikes</a>
