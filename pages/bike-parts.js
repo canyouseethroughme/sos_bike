@@ -16,6 +16,7 @@ class bikeParts extends React.Component {
     fetch("https://sosbike.dk/wordpress/wp-json/wp/v2/bike_parts?per_page=100")
       .then(result => result.json())
       .then(result => {
+        console.log(result);
         this.setState({
           bikes: result
         });
@@ -28,9 +29,11 @@ class bikeParts extends React.Component {
         return (
           <Bike
             key={index}
-            picture={bike.acf.bike_parts_main_image.url}
+            picture={bike.acf.main_image.url}
             bikeName={bike.title.rendered}
-            bikePage=""
+            pageRequested="/bike"
+            type="bike-parts"
+            id={bike.id}
           />
         );
       });

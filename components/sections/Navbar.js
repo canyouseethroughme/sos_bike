@@ -18,9 +18,6 @@ const Navbar = props => (
             </a>
           </Link>
           <div className="dropdownContent">
-            <Link href={props.custom}>
-              <a>Custom bikes</a>
-            </Link>
             <Link href={props.retro}>
               <a>New & Retro bikes</a>
             </Link>

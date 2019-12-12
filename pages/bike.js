@@ -88,6 +88,7 @@ class Bike extends React.Component {
                     <p>New and Retro bikes</p>
                   )}
                   {this.state.bikeType === "rentals" && <p>Rentals</p>}
+                  {this.state.bikeType === "bike-parts" && <p>Bike parts</p>}
                   <h1>
                     <b>{this.state.bikeInfo.title.rendered}</b>
                   </h1>
@@ -123,9 +124,12 @@ class Bike extends React.Component {
                   <button className="getOfferButton" onClick={this.openModal}>
                     Get offer
                   </button>
-                  <p className="warrantyP">
-                    *Warranty - {this.state.bikeInfo.acf.warranty} years
-                  </p>
+                  {this.state.bikeType === "new nad retro" ||
+                    (this.state.bikeType === "bike-parts" && (
+                      <p className="warrantyP">
+                        *Warranty - {this.state.bikeInfo.acf.warranty} years
+                      </p>
+                    ))}
                 </div>
               </div>
             </div>
@@ -308,14 +312,19 @@ class Bike extends React.Component {
       if (this.state.bikeType === "rentals") {
         urlValue = "rentals";
       }
+      if (this.state.bikeType === "bike-parts") {
+        urlValue = "bike_parts";
+      }
       fetch(
         `https://sosbike.dk/wordpress/wp-json/wp/v2/${urlValue}/${this.state.bikeId}`
       )
         .then(res => res.json())
         .then(jsonRes => {
-          this.setState({ bikeInfo: jsonRes }, () => {
-            console.log(this.state.bikeInfo);
-          });
+          console.log(
+            `https://sosbike.dk/wordpress/wp-json/wp/v2/${urlValue}/${this.state.bikeId}`
+          );
+          console.log("bikeinfo here", jsonRes);
+          this.setState({ bikeInfo: jsonRes }, () => {});
         });
     });
   }
