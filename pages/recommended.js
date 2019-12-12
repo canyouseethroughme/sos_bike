@@ -28,12 +28,13 @@ const Recommended = props => (
           <div className="imageContainer">
             <div>
               <img
-                src="../static/recommended/steven_uitentuis_circle.png"
+                src="../static/recommended/pic.jpg"
                 height={180}
                 width={180}
+                style={{ borderRadius: "50% ", marginTop: "11px" }}
               />
             </div>
-            <label>Steven Uitentuis</label>
+            <label>Patrick Maron Limmose</label>
           </div>
           <div className="textContainer">
             <h1>A love letter</h1>
