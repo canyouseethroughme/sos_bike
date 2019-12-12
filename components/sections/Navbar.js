@@ -25,7 +25,7 @@ const Navbar = props => (
               <a>New & Retro bikes</a>
             </Link>
             <Link href={props.new}>
-              <a>New bikes</a>
+              <a>Rentals</a>
             </Link>
             <Link href={props.parts}>
               <a>Bike parts</a>

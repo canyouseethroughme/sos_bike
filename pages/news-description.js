@@ -34,7 +34,7 @@ class NewsDescription extends React.Component {
             shop="#shopPage"
             custom="custom-bikes"
             retro="new-and-retro"
-            new="new-bikes"
+            new="rentals"
             parts="bike-parts"
             whyus="#whyusPage"
             about="#aboutPage"
@@ -44,15 +44,51 @@ class NewsDescription extends React.Component {
             <div className="newsDescriptionContainer">
               <div className="newsDescriptionInformation">
                 <img
-                  src={this.state.newsInfo.acf.news_image.link}
-                  height={700}
-                  width={700}
+                  src={this.state.newsInfo.acf.news_image.url}
+                  height={496}
+                  width={580}
                 />
+                <div className="newsTexDescription">
+                  <h1>{this.state.newsInfo.title.rendered}</h1>
+                  <p>
+                    "Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                    sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                    magna aliquyam erat, sed diam voluptua. At vero eos et
+                    accusam et justo duo dolores et"
+                  </p>
+                </div>
               </div>
             </div>
           )}
         </div>
         <Footer />
+        <style jsx>{`
+          .newsDescriptionContainer {
+            position: relative;
+            top: 91px;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+          }
+          .newsDescriptionInformation {
+            width: 1200px;
+            margin-top: 90px;
+            display: flex;
+            flex-direction: row;
+          }
+          .newsTexDescription {
+            margin-left: 120px;
+          }
+          .newsTexDescription > h1 {
+            color: white;
+            font-family: Ronnia;
+            font-weight: bold;
+            font-size: 24px;
+          }
+          .newsTexDescription > p {
+            color: white;
+          }
+        `}</style>
         <style jsx global>{`
           * {
             margin: 0;

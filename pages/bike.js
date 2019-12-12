@@ -34,7 +34,7 @@ class Bike extends React.Component {
             shop="#shopPage"
             custom="custom-bikes"
             retro="new-and-retro"
-            new="new-bikes"
+            new="rentals"
             parts="bike-parts"
             whyus="#whyusPage"
             about="#aboutPage"
@@ -58,7 +58,7 @@ class Bike extends React.Component {
                     />
                     <div className="modalContactInformation">
                       {this.state.bikeType === "new and retro" && (
-                        <p>New & Retro bikes</p>
+                        <p>New {"&"} Retro bikes</p>
                       )}
                       {this.state.bikeType === "new" && <p>New bikes</p>}
                       <h1>{this.state.bikeInfo.title.rendered}</h1>
@@ -87,7 +87,7 @@ class Bike extends React.Component {
                   {this.state.bikeType === "new and retro" && (
                     <p>New and Retro bikes</p>
                   )}
-                  {this.state.bikeType === "new" && <p>New bikes</p>}
+                  {this.state.bikeType === "rentals" && <p>Rentals</p>}
                   <h1>
                     <b>{this.state.bikeInfo.title.rendered}</b>
                   </h1>
@@ -298,18 +298,24 @@ class Bike extends React.Component {
   componentDidMount() {
     const url = window.location;
     const urlObject = new URL(url);
-    let bikeType = urlObject.searchParams.get("type");
-    if (bikeType === "new and retro") {
-      bikeType = "retro";
-    }
+    const bikeType = urlObject.searchParams.get("type");
     const bikeId = urlObject.searchParams.get("id");
     this.setState({ bikeType, bikeId }, () => {
+      let urlValue = "";
+      if (this.state.bikeType === "new and retro") {
+        urlValue = "retro";
+      }
+      if (this.state.bikeType === "rentals") {
+        urlValue = "rentals";
+      }
       fetch(
-        `https://sosbike.dk/wordpress/wp-json/wp/v2/${this.state.bikeType}/${this.state.bikeId}`
+        `https://sosbike.dk/wordpress/wp-json/wp/v2/${urlValue}/${this.state.bikeId}`
       )
         .then(res => res.json())
         .then(jsonRes => {
-          this.setState({ bikeInfo: jsonRes });
+          this.setState({ bikeInfo: jsonRes }, () => {
+            console.log(this.state.bikeInfo);
+          });
         });
     });
   }

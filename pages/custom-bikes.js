@@ -42,7 +42,7 @@ class customBikes extends React.Component {
             shop="#shopPage"
             custom="custom-bikes"
             retro="new-and-retro"
-            new="new-bikes"
+            new="rentals"
             parts="bike-parts"
             whyus="#whyusPage"
             about="#aboutPage"

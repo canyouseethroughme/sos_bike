@@ -12,9 +12,10 @@ class newBikes extends React.Component {
   }
 
   componentDidMount() {
-    fetch("https://sosbike.dk/wordpress/wp-json/wp/v2/new?per_page=100")
+    fetch("https://sosbike.dk/wordpress/wp-json/wp/v2/rentals?per_page=100")
       .then(result => result.json())
       .then(result => {
+        console.log(result);
         this.setState({
           bikes: result
         });
@@ -29,9 +30,11 @@ class newBikes extends React.Component {
           return (
             <Bike
               key={index}
-              picture={bike.acf.new_bike_main_image.url}
+              picture={bike.acf.main_image.url}
               bikeName={bike.title.rendered}
-              bikePage=""
+              type="rentals"
+              pageRequested="/bike"
+              id={bike.id}
             />
           );
         });
@@ -44,7 +47,7 @@ class newBikes extends React.Component {
             shop="#shopPage"
             custom="custom-bikes"
             retro="new-and-retro"
-            new="new-bikes"
+            new="rentals"
             parts="bike-parts"
             whyus="#whyusPage"
             about="#aboutPage"
@@ -55,7 +58,7 @@ class newBikes extends React.Component {
             <div className="backgroundSvg"></div>
 
             <CategoryBikes
-              category="New Bikes"
+              category="Rentals"
               description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore et dolore magna
                 aliquyam erat, sed diam voluptua. At vero eos et accusam et

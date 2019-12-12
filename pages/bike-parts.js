@@ -13,7 +13,7 @@ class bikeParts extends React.Component {
   }
 
   componentDidMount() {
-    fetch("https://sosbike.dk/wordpress/wp-json/wp/v2/parts?per_page=100")
+    fetch("https://sosbike.dk/wordpress/wp-json/wp/v2/bike_parts?per_page=100")
       .then(result => result.json())
       .then(result => {
         this.setState({
@@ -42,7 +42,7 @@ class bikeParts extends React.Component {
             shop="#shopPage"
             custom="custom-bikes"
             retro="new-and-retro"
-            new="new-bikes"
+            new="rentals"
             parts="bike-parts"
             whyus="#whyusPage"
             about="#aboutPage"

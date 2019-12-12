@@ -25,7 +25,7 @@ const Bikes = () => {
         <div className="containerBikes">
           <div className="bike">
             <img src="static/bikes_assets/new.png" />
-            <Link href="new-bikes">
+            <Link href="rentals">
               <span>
                 <a>
                   View more <span>&#43;</span>
