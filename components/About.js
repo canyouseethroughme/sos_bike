@@ -89,7 +89,7 @@ const About = () => {
         }
         .icons {
           position: relative;
-          top: 160px;
+          top: 135px;
         }
         .icons > a {
           font-size: 24px;
@@ -103,7 +103,7 @@ const About = () => {
         }
         button {
           position: relative;
-          top: 160px;
+          top: 130px;
           margin: 25px auto;
           width: 160px;
           height: 40px;
