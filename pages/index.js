@@ -46,7 +46,7 @@ class Index extends React.Component {
     const newsImgs = this.state.news.map(item => {
       return (
         <div>
-          <Link href="/news">
+          <Link href={`/news-description?type=&id=${item.id}`}>
             <img src={item.acf.news_image.url} height={206} width={206} />
           </Link>
         </div>
@@ -83,16 +83,89 @@ class Index extends React.Component {
           </div>
           <div>
             <Slider />
-
             <Bikes />
-
             <Whyus />
-
             <About />
           </div>
         </div>
-        <div style={{ position: "absolute", top: "3550px" }}>
-          <Footer />
+
+        <div style={{ position: "absolute", top: "3594px" }}>
+          <div
+            className="swapfiets"
+            style={{ width: "100vw", height: "364px" }}
+          >
+            <div
+              className="brownShadow"
+              style={{
+                width: "100vw",
+                height: "364px",
+                backgroundColor: "#1C1713F2",
+                opacity: "95%",
+                display: "flex",
+                flexDirection: "row"
+              }}
+            >
+              <div className="imgDiv">
+                <img src={"../static/swapfietslogo/Image 3.png"} />
+              </div>
+              <div className="imgDiv">
+                <img src={"../static/swapfietslogo/Image 3.png"} />
+              </div>
+              <div className="imgDiv">
+                <img src={"../static/swapfietslogo/Image 3.png"} />
+              </div>
+              <div className="imgDiv">
+                <img
+                  src={"../static/swapfietslogo/Image 3.png"}
+                  width={174}
+                  height={87}
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              flexDirection: "column"
+            }}
+          >
+            <h1
+              style={{
+                marginTop: "80px",
+                fontFamily: "Farnham Text",
+                fontWeight: "semi-bold",
+                fontSize: "46px",
+                color: "#FAFAFA"
+              }}
+            >
+              News
+            </h1>
+            <div
+              style={{
+                width: "60px",
+                height: "5px",
+                backgroundColor: "#997F67",
+                marginTop: "30px"
+              }}
+            ></div>
+          </div>
+          <div
+            className="newsSlider"
+            style={{
+              marginTop: "100px",
+              display: "flex",
+              flexDirection: "row",
+              overflowX: "scroll",
+              width: "100vw"
+            }}
+          >
+            {newsImgs}
+          </div>
+          <div style={{ marginTop: "-168px" }}>
+            <Footer />
+          </div>
         </div>
         <style jsx global>{`
           * {
@@ -112,10 +185,25 @@ class Index extends React.Component {
         `}</style>
 
         <style jsx>{`
+          .swapfiets {
+            background-image: url("../static/recommended/recommended.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+          }
+          .imgDiv {
+            display: flex;
+            width: 25%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+          }
           .content {
             margin: auto;
             width: 1200px;
             min-height: 100vh;
+          }
+          .newsSlider::-webkit-scrollbar {
+            display: none;
           }
 
           .navbarSecond {

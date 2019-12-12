@@ -45,7 +45,7 @@ const Navbar2 = props => (
         <Link href={props.about}>
           <a id="fourthChild">About</a>
         </Link>
-        <Link href={props.blog}>
+        <Link href={"news"}>
           <a id="fifthChild">Blog</a>
         </Link>
         <Link href={props.recommended}>
