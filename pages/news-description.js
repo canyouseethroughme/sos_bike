@@ -73,6 +73,7 @@ class NewsDescription extends React.Component {
           .newsDescriptionInformation {
             width: 1200px;
             margin-top: 90px;
+            margin-bottom: 90px;
             display: flex;
             flex-direction: row;
           }
@@ -86,7 +87,10 @@ class NewsDescription extends React.Component {
             font-size: 24px;
           }
           .newsTexDescription > p {
-            color: white;
+            font-family: ronnia, sans-serif;
+            font-size: 16px;
+            color: #fafafa;
+            margin-top: 40px;
           }
         `}</style>
         <style jsx global>{`

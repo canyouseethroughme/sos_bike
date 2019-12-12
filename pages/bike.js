@@ -192,7 +192,7 @@ class Bike extends React.Component {
             margin-top: 20px;
           }
           .modalContactInformation > p {
-            font-familt: ronnia, sans-serif;
+            font-family: ronnia, sans-serif;
             font-size: 16px;
             color: #fafafa;
             margin-top: 40px;
