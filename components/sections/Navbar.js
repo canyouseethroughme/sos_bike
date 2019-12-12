@@ -18,13 +18,13 @@ const Navbar = props => (
             </a>
           </Link>
           <div className="dropdownContent">
-            <Link href={props.retro}>
+            <Link href="new-and-retro">
               <a>New & Retro bikes</a>
             </Link>
-            <Link href={props.new}>
+            <Link href="rentals">
               <a>Rentals</a>
             </Link>
-            <Link href={props.parts}>
+            <Link href="bike-parts">
               <a>Bike parts</a>
             </Link>
           </div>

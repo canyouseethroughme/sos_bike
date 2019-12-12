@@ -81,12 +81,19 @@ class Index extends React.Component {
               recommended="recommended"
             />
           </div>
-          <Slider />
-          <Bikes />
-          <Whyus />
-          <About />
+          <div>
+            <Slider />
+
+            <Bikes />
+
+            <Whyus />
+
+            <About />
+          </div>
         </div>
-        <Footer />
+        <div style={{ position: "absolute", top: "3550px" }}>
+          <Footer />
+        </div>
         <style jsx global>{`
           * {
             box-sizing: border-box;
