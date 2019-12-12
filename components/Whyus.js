@@ -13,7 +13,8 @@ const Whyus = () => {
           <div className="cardContainer">
             <div>
               <h2>01</h2>
-              <p>
+
+              <p style={{ height: 115 }}>
                 For us, professional craftsmanship combined with exclusive
                 customer care is number one priority – we provide our best
                 knowledge so everyone who comes to us can feel welcomed and
@@ -23,7 +24,7 @@ const Whyus = () => {
             </div>
             <div style={{ margin: "0 120px" }}>
               <h2>02</h2>
-              <p>
+              <p style={{ height: 115 }}>
                 Most of our vintage bikes are made up of 100% upcycled materials
                 and restored in a very eccentric way; environmental care and
                 sustainability plays a huge role in our business too.
@@ -32,7 +33,7 @@ const Whyus = () => {
             </div>
             <div>
               <h2>03</h2>
-              <p>
+              <p style={{ height: 115 }}>
                 We work closely with local bike shops and suppliers. We always
                 select the best quality bike frames and parts for our vintage
                 and new bikes as well; environmental care and sustainability
