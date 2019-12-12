@@ -27,10 +27,9 @@ const Footer = props => (
           <div className="bikesContainer">
             <label className="sectionLabel">Bikes</label>
             <div className="sectionLinks">
-              <a href="/retro-bike">Retro</a>
-              <a href="google.com">Custom</a>
-              <a href="google.com">New</a>
-              <a href="google.com">Parts</a>
+              <a href="/new-and-retro">New & Retro</a>
+              <a href="/rentals">Rentals</a>
+              <a href="/bike-parts">Parts</a>
             </div>
           </div>
           <div className="aboutContainer">
