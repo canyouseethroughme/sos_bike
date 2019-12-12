@@ -46,7 +46,7 @@ const Bikes = () => {
           </div>
           <div className="bike">
             <img src="static/first-page/3.jpg" />
-            <Link href="retro-bikes">
+            <Link href="coming-soon">
               <span>
                 <a>
                   View more <span>&#43;</span>
