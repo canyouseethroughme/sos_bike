@@ -2,6 +2,7 @@ import Bike from "../components/sections/Bike";
 import Navbar2 from "../components/sections/Navbar2";
 import CategoryBikes from "../components/sections/CategoryBikes";
 import Header from "../components/sections/Header";
+import Footer from "../components/sections/Footer";
 
 import fetch from "isomorphic-unfetch";
 
@@ -76,6 +77,7 @@ class retroBikes extends React.Component {
               )}
           </div>
         </div>
+        <Footer />
         <style jsx global>{`
           * {
             margin: 0;
