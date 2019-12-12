@@ -24,29 +24,29 @@ const Bikes = () => {
         </div>
         <div className="containerBikes">
           <div className="bike">
-            <img src="static/bikes_assets/new.png" />
-            <Link href="rentals">
+            <img src="static/first-page/1.jpg" />
+            <Link href="new-and-retro">
               <span>
                 <a>
                   View more <span>&#43;</span>
                 </a>
               </span>
             </Link>
-            <p>New bikes</p>
+            <p>New & Retro bikes</p>
           </div>
           <div className="bike">
-            <img src="static/bikes_assets/custom.png" />
-            <Link href="custom-bikes">
+            <img src="static/first-page/2.jpg" />
+            <Link href="rental">
               <span>
                 <a>
                   View more <span>&#43;</span>
                 </a>
               </span>
             </Link>
-            <p>Custom bikes</p>
+            <p>Rental bikes</p>
           </div>
           <div className="bike">
-            <img src="static/bikes_assets/retro.png" />
+            <img src="new-and-retro" />
             <Link href="retro-bikes">
               <span>
                 <a>
@@ -54,10 +54,10 @@ const Bikes = () => {
                 </a>
               </span>
             </Link>
-            <p>Retro bikes</p>
+            <p>Service</p>
           </div>
           <div className="bike">
-            <img src="static/bikes_assets/parts.png" />
+            <img src="static/first-page/4.jpg" />
             <Link href="bike-parts">
               <span>
                 <a>
