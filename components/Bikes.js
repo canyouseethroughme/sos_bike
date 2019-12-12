@@ -16,10 +16,9 @@ const Bikes = () => {
         <div className="h4Container">
           <div className="borderTop"></div>
           <h4>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd
+            Looking for a new bike for yourself? A unique vintage piece you can
+            show off your friends? A bike part that is essential for your bike?
+            Would like to book a service? Find the ones that fits you!
           </h4>
         </div>
         <div className="containerBikes">
@@ -46,7 +45,7 @@ const Bikes = () => {
             <p>Rental bikes</p>
           </div>
           <div className="bike">
-            <img src="new-and-retro" />
+            <img src="static/first-page/3.jpg" />
             <Link href="retro-bikes">
               <span>
                 <a>

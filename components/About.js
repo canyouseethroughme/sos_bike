@@ -8,13 +8,19 @@ const About = () => {
           <h1>About</h1>
           <div className="borderTop"></div>
           <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-            et dolore magna aliquyam erat, sed diam voluptua.
+            SoS Bike is not only a place for everyday cyclers, but for bike
+            lovers and zero waste enthusiasts too. Now situated in the center of
+            Aarhus accompanying a vintage style barber shop, it is easy to stay
+            longer talking about bikes and make new friends at the same time.
+            SoS Bike welcomes new customers who are interested in new bikes or
+            unique vintage creations; people who need a small fix or people who
+            desire a bike from scratch. Our customer base varies as well, from
+            students to businessmen who would like to get their bikes fixed or a
+            new touch for their existing bikes. Our environmental approach is
+            one of a kind: we not only save bikes and bike parts, but restore
+            them in a functional and stylish way too. Since Aarhus is a very
+            biker centered city with many cyclers, we would like to give our
+            best knowledge and experience to all Aarhusians who need our help.
           </p>
           <div className="icons">
             <Link href="https://www.facebook.com/aarhussosbike/">

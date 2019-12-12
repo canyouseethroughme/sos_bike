@@ -14,24 +14,29 @@ const Whyus = () => {
             <div>
               <h2>01</h2>
               <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut
+                For us, professional craftsmanship combined with exclusive
+                customer care is number one priority – we provide our best
+                knowledge so everyone who comes to us can feel welcomed and
+                cared for.
               </p>
               <img src="static/bikes_assets/1-edited@2x.png" alt="" />
             </div>
             <div style={{ margin: "0 120px" }}>
               <h2>02</h2>
               <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut
+                Most of our vintage bikes are made up of 100% upcycled materials
+                and restored in a very eccentric way; environmental care and
+                sustainability plays a huge role in our business too.
               </p>
               <img src="static/bikes_assets/2-edited@2x.png" alt="" />
             </div>
             <div>
               <h2>03</h2>
               <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut
+                We work closely with local bike shops and suppliers. We always
+                select the best quality bike frames and parts for our vintage
+                and new bikes as well; environmental care and sustainability
+                plays a huge role in our business too.
               </p>
               <img src="static/bikes_assets/3-edited@2x.png" alt="" />
             </div>
