@@ -106,20 +106,44 @@ class Index extends React.Component {
               }}
             >
               <div className="imgDiv">
-                <img src={"../static/swapfietslogo/Image 3.png"} />
+                <Link href={"https://www.facebook.com/tinyhousetransylvania/"}>
+                  <img
+                    src={"../static/partners/ecotiny.png"}
+                    width={174}
+                    height={"auto"}
+                    style={{ objectFit: "cover" }}
+                  />
+                </Link>
               </div>
               <div className="imgDiv">
-                <img src={"../static/swapfietslogo/Image 3.png"} />
+                <Link href={"http://greenon.dk/"}>
+                  <img
+                    src={"../static/partners/greenon.png"}
+                    width={174}
+                    height={"auto"}
+                    style={{ objectFit: "cover" }}
+                  />
+                </Link>
               </div>
               <div className="imgDiv">
-                <img src={"../static/swapfietslogo/Image 3.png"} />
+                <Link href={"https://swapfiets.dk/"}>
+                  <img
+                    src={"../static/partners/swapfiets@2x.png"}
+                    width={174}
+                    height={"auto"}
+                    style={{ objectFit: "cover" }}
+                  />
+                </Link>
               </div>
               <div className="imgDiv">
-                <img
-                  src={"../static/swapfietslogo/Image 3.png"}
-                  width={174}
-                  height={87}
-                />
+                <Link href={"https://www.facebook.com/vaerdicentralen"}>
+                  <img
+                    src={"../static/partners/vaerdicentralen@2x.png"}
+                    width={174}
+                    height={"auto"}
+                    style={{ objectFit: "cover" }}
+                  />
+                </Link>
               </div>
             </div>
           </div>
