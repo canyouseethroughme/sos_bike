@@ -53,8 +53,8 @@ class Bike extends React.Component {
                   <div className="modalInformation">
                     <img
                       src={this.state.bikeInfo.acf.main_image.url}
-                      height={496}
-                      width={580}
+                      height={400}
+                      width={400}
                     />
                     <div className="modalContactInformation">
                       {this.state.bikeType === "new and retro" && (
@@ -148,6 +148,7 @@ class Bike extends React.Component {
         `}</style>
         <style jsx>{`
           .modalContainer {
+            position: absolute;
             margin-top: 140px;
             align-items: center;
             text-decoration: none;
@@ -172,6 +173,7 @@ class Bike extends React.Component {
             margin-left: 40px;
             margin-top: 40px;
             margin-bottom: 45px;
+            object-fit: contain;
           }
           .modalContactInformation {
             width: 470px;
@@ -232,7 +234,7 @@ class Bike extends React.Component {
           }
           .productInfo {
             color: white;
-            width: 408px;
+            width: 480px;
           }
           .productInfo > p:first-of-type {
             font-family: ronnia, sans-serif;
@@ -260,7 +262,7 @@ class Bike extends React.Component {
           .productInfo > table > thead > tr > th,
           .productInfo > table > tbody > tr > td {
             font-family: ronnia, sans-serif;
-            font-size: 8px;
+            font-size: 12px;
             color: #fafafa;
             text-align: center;
             height: 30px;

@@ -19,9 +19,7 @@ class News extends React.Component {
     )
       .then(res => res.json())
       .then(jsonRes => {
-        this.setState({ news: jsonRes }, () => {
-          console.log(this.state.news);
-        });
+        this.setState({ news: jsonRes });
       });
   }
   render() {
@@ -47,8 +45,8 @@ class News extends React.Component {
             retro="new-and-retro"
             new="rentals"
             parts="bike-parts"
-            whyus="#whyusPage"
-            about="#aboutPage"
+            whyus="index#whyusPage"
+            about="index#aboutPage"
             recommended="recommended"
           />
         </div>
@@ -56,10 +54,7 @@ class News extends React.Component {
           <div className="titleContainer">
             <CategoryBikes
               category="News"
-              description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua. At vero eos et accusam et justo duo
-              dolores et"
+              description="LSome stuff I bet you didn't know about bikes, environment, business and sustainability."
             />
           </div>
         </div>

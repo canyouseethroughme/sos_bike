@@ -7,7 +7,7 @@ const Navbar = props => (
         <Link href={props.home}>
           <a id="firstChild">Home</a>
         </Link>
-        <Link href={props.blog}>
+        <Link href="news">
           <a id="secondChild">Blog</a>
         </Link>
 

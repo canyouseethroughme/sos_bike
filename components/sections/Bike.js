@@ -13,7 +13,7 @@ const Bike = props => (
         >
           <span>
             <a>
-              {props.id} View more<span>&#43;</span>
+              {props.id} {console.log(props)}View more<span>&#43;</span>
             </a>
           </span>
         </Link>

@@ -6,6 +6,7 @@ import Bikes from "../components/Bikes";
 import Whyus from "../components/Whyus";
 import About from "../components/About";
 import Footer from "../components/sections/Footer";
+import NewsLink from "../components/sections/NewsLink";
 
 import Link from "next/link";
 
@@ -23,11 +24,20 @@ class Index extends React.Component {
     )
       .then(res => res.json())
       .then(jsonRes => {
-        console.log(jsonRes);
-        this.setState({ news: jsonRes }, () => {
-          console.log(this.state.news);
-        });
+        this.setState({ news: jsonRes });
       });
+
+    let direction = window.location.href.split("#");
+    if (
+      direction.length > 1 &&
+      (direction[1] === "aboutPage" || direction[1] === "whyusPage")
+    ) {
+      setTimeout(() => {
+        document.getElementById("#" + direction[1]).scrollIntoView({
+          behavior: "smooth"
+        });
+      }, 300);
+    }
   }
 
   handleScroll = () => {
@@ -43,12 +53,15 @@ class Index extends React.Component {
   render() {
     const { active } = this.state;
     const { hasAnimation } = this.state;
-    const newsImgs = this.state.news.map(item => {
+    const newsImgs = this.state.news.map((item, index) => {
       return (
-        <div>
-          <Link href={`/news-description?type=&id=${item.id}`}>
-            <img src={item.acf.news_image.url} height={206} width={206} />
-          </Link>
+        <div key={index}>
+          <NewsLink
+            kye={item.id}
+            url={`/news-description?type=&id=${item.id}`}
+            imgSrc={item.acf.news_image.url}
+            title={item.title.rendered}
+          />
         </div>
       );
     });
@@ -85,109 +98,61 @@ class Index extends React.Component {
             <Slider />
             <Bikes />
             <Whyus />
-            <About />
+            <About id="aboutPage" />
           </div>
         </div>
 
-        <div style={{ position: "absolute", top: "3594px" }}>
-          <div
-            className="swapfiets"
-            style={{ width: "100vw", height: "364px" }}
-          >
-            <div
-              className="brownShadow"
-              style={{
-                width: "100vw",
-                height: "364px",
-                backgroundColor: "#1C1713F2",
-                opacity: "95%",
-                display: "flex",
-                flexDirection: "row"
-              }}
-            >
+        <div className="mainContainer">
+          <div className="swapfiets">
+            <div className="brownShadow">
               <div className="imgDiv">
                 <Link href={"https://www.facebook.com/tinyhousetransylvania/"}>
                   <img
+                    className="imgClass"
                     src={"../static/partners/ecotiny.png"}
                     width={174}
                     height={"auto"}
-                    style={{ objectFit: "cover" }}
                   />
                 </Link>
               </div>
               <div className="imgDiv">
                 <Link href={"http://greenon.dk/"}>
                   <img
+                    className="imgClass"
                     src={"../static/partners/greenon.png"}
                     width={174}
                     height={"auto"}
-                    style={{ objectFit: "cover" }}
                   />
                 </Link>
               </div>
               <div className="imgDiv">
                 <Link href={"https://swapfiets.dk/"}>
                   <img
+                    className="imgClass"
                     src={"../static/partners/swapfiets@2x.png"}
                     width={174}
                     height={"auto"}
-                    style={{ objectFit: "cover" }}
                   />
                 </Link>
               </div>
               <div className="imgDiv">
                 <Link href={"https://www.facebook.com/vaerdicentralen"}>
                   <img
+                    className="imgClass"
                     src={"../static/partners/vaerdicentralen@2x.png"}
                     width={174}
                     height={"auto"}
-                    style={{ objectFit: "cover" }}
                   />
                 </Link>
               </div>
             </div>
           </div>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              flexDirection: "column"
-            }}
-          >
-            <h1
-              style={{
-                marginTop: "80px",
-                fontFamily: "Farnham Text",
-                fontWeight: "semi-bold",
-                fontSize: "46px",
-                color: "#FAFAFA"
-              }}
-            >
-              News
-            </h1>
-            <div
-              style={{
-                width: "60px",
-                height: "5px",
-                backgroundColor: "#997F67",
-                marginTop: "30px"
-              }}
-            ></div>
+          <div className="newsTitleContainer">
+            <h1 className="newsTitle">News</h1>
+            <div className="line"></div>
           </div>
-          <div
-            className="newsSlider"
-            style={{
-              marginTop: "100px",
-              display: "flex",
-              flexDirection: "row",
-              overflowX: "scroll",
-              width: "100vw"
-            }}
-          >
-            {newsImgs}
-          </div>
-          <div style={{ marginTop: "-168px" }}>
+          <div className="newsSlider">{newsImgs}</div>
+          <div className="footerContainer">
             <Footer />
           </div>
         </div>
@@ -209,10 +174,50 @@ class Index extends React.Component {
         `}</style>
 
         <style jsx>{`
+          .mainContainer {
+            position: absolute;
+            top: 3594px;
+          }
           .swapfiets {
             background-image: url("../static/recommended/recommended.png");
             background-size: cover;
             background-repeat: no-repeat;
+            width: 100vw;
+            height: 364px;
+          }
+          .brownShadow {
+            width: 100vw;
+            height: 364px;
+            background-color: #1c1713f2;
+            opacity: 95%;
+            display: flex;
+            flex-direction: row;
+          }
+          .newsSlider {
+            margin-top: 100px;
+            display: flex;
+            flex-direction: row;
+            overflow-x: scroll;
+            width: 100vw;
+          }
+          .line {
+            width: 60px;
+            height: 5px;
+            background-color: #997f67;
+            margin-top: 30px;
+          }
+          .newsTitle {
+            margin-top: 80px;
+            font-family: "Farnham Text";
+            font-weight: bold;
+            font-size: 46px;
+            color: #fafafa;
+          }
+          .newsTitleContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
           }
           .imgDiv {
             display: flex;
@@ -220,6 +225,9 @@ class Index extends React.Component {
             height: 100%;
             justify-content: center;
             align-items: center;
+          }
+          .imgClass {
+            object-fit: cover;
           }
           .content {
             margin: auto;
@@ -234,6 +242,9 @@ class Index extends React.Component {
             position: absolute;
             top: -90px;
             left: 0;
+          }
+          .footerContainer {
+            margin-top: -168px;
           }
 
           #scrolled {

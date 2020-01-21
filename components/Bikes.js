@@ -35,7 +35,7 @@ const Bikes = () => {
           </div>
           <div className="bike">
             <img src="static/first-page/2.jpg" />
-            <Link href="rental">
+            <Link href="rentals">
               <span>
                 <a>
                   View more <span>&#43;</span>

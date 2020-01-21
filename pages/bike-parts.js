@@ -57,10 +57,7 @@ class bikeParts extends React.Component {
 
             <CategoryBikes
               category="Bike parts"
-              description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                justo duo dolores et"
+              description="From breaks to gears, unique accessories and general bike parts , you can find here everything! Can't find what you are looking for? We can also order parts!"
             />
             <div className="container">{bikes}</div>
             {!!this.state.bikes &&

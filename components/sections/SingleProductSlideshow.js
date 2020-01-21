@@ -73,7 +73,7 @@ class SingleProductSlideshow extends React.Component {
             </div>
             <img
               src={this.props.bikeInfo.acf[this.state.selectedImage].url}
-              style={{ objectFit: "contain", height: 700 }}
+              style={{ objectFit: "contain", height: 500 }}
             />
             <div>
               <div className="arrows">
@@ -184,12 +184,14 @@ class SingleProductSlideshow extends React.Component {
             margin-top: 40px;
           }
           .modalContainer {
+            position: absolute;
             margin-top: 140px;
             display: flex;
             align-items: center;
             justify-content: space-around;
             text-decoration: none;
             outline: 0;
+            width: 100%;
           }
           .modalContaine:focus {
             outline: 0;

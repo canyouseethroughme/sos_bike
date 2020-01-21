@@ -7,7 +7,7 @@ const Footer = props => (
       <div className="footerContainer">
         <div className="logoContainer">
           <img src="static/logo.png" height={100} width={150} />
-          <p>© 2019 - Sosbike, ApS, Aarhus, Denmark. All rights reserved</p>
+          <p>© 2020 - SoSbike, ApS, Aarhus, Denmark. All rights reserved</p>
         </div>
         <div className="sectionsContainer">
           <div className="legalContainer">

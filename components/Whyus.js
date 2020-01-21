@@ -14,7 +14,7 @@ const Whyus = () => {
             <div>
               <h2>01</h2>
 
-              <p style={{ height: 115 }}>
+              <p className="paragraph">
                 For us, professional craftsmanship combined with exclusive
                 customer care is number one priority – we provide our best
                 knowledge so everyone who comes to us can feel welcomed and
@@ -22,9 +22,9 @@ const Whyus = () => {
               </p>
               <img src="static/bikes_assets/1-edited@2x.png" alt="" />
             </div>
-            <div style={{ margin: "0 120px" }}>
+            <div className="secondParagraphContainer">
               <h2>02</h2>
-              <p style={{ height: 115 }}>
+              <p className="paragraph">
                 Most of our vintage bikes are made up of 100% upcycled materials
                 and restored in a very eccentric way; environmental care and
                 sustainability plays a huge role in our business too.
@@ -33,7 +33,7 @@ const Whyus = () => {
             </div>
             <div>
               <h2>03</h2>
-              <p style={{ height: 115 }}>
+              <p className="paragraph">
                 We work closely with local bike shops and suppliers. We always
                 select the best quality bike frames and parts for our vintage
                 and new bikes as well; environmental care and sustainability
@@ -58,11 +58,17 @@ const Whyus = () => {
           width: 100vw;
           height: 720px;
         }
+        .paragraph {
+          height: 115;
+        }
         .childContainer {
           width: 1200px;
           margin: auto;
           padding-top: 80px;
           position: relative;
+        }
+        .secondParagraphContainer {
+          margin: 0 120px;
         }
         .h1Container {
           height: 55px;

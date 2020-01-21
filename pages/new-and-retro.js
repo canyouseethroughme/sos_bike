@@ -60,10 +60,7 @@ class retroBikes extends React.Component {
 
             <CategoryBikes
               category="New and Retro Bikes"
-              description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                justo duo dolores et"
+              description="Here is the selection of our new and retro bikes ! Remember, our selection changes on the basis of our supply, so if you like something very much, contact us immediately!"
             />
             <div className="container">{bikes}</div>
             {!!this.state.bikes &&

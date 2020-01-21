@@ -59,10 +59,7 @@ class newBikes extends React.Component {
 
             <CategoryBikes
               category="Rentals"
-              description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                justo duo dolores et"
+              description="The bike rental is our brand new service for you! You can choose between basic and family bikes , women and men bikes - choose which one you would like to ride!"
             />
             <div className="container">{bikes}</div>
             {!!this.state.bikes &&
