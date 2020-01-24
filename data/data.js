@@ -42,7 +42,7 @@ const data = {
       index: 5,
       type: "New and vintage",
       picture: "static/bikes_home/retro.png",
-      link: "new-and-retre"
+      link: "new-and-retro"
     },
 
     {
