@@ -144,13 +144,13 @@ const Footer = props => (
 
       @media only screen and (max-width: 480px) {
         .fullContainer {
-          width: 100%;
+          width: 100vw;
            {
             /* flex-direction: column; */
           }
         }
         .footerContainer {
-          width: 100%;
+          width: 100vw;
           flex-direction: column;
           align-items: center;
         }

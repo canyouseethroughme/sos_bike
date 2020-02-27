@@ -161,15 +161,13 @@ class retroBikes extends React.Component {
           @media only screen and (max-width: 480px) {
             #retroBikes {
               max-width: 480px;
-              padding-top: 0px;
             }
             .container {
-              /* width: 100%; */
-              width: 400px;
+              width: 100vw;
               display: flex;
               flex-wrap: wrap;
               justify-content: space-evenly;
-              padding-right: 25px;
+              margin-top: 60px;
             }
             .bike {
               height: 300px;
