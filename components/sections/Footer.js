@@ -7,6 +7,25 @@ const Footer = props => (
       <div className="footerContainer">
         <div className="logoContainer">
           <img src="static/logo.png" height={100} width={150} />
+          <div className="sectionsMobile">
+            <div className="firstRow">
+              <a href="google.com">Cookies</a>
+              <a href="terms-of-service">Terms of Service</a>
+              <a href="google.com">Privacy policy</a>
+            </div>
+            <div className="iconsContainer">
+              <Link href="https://www.facebook.com/aarhussosbike/">
+                <a target="_blank" className="fa">
+                  &#xf09a;
+                </a>
+              </Link>
+              <Link href="https://www.instagram.com/s0sbike/">
+                <a target="_blank" className="fa">
+                  &#xf16d;
+                </a>
+              </Link>
+            </div>
+          </div>
           <p>© 2020 - SoSbike, ApS, Aarhus, Denmark. All rights reserved</p>
         </div>
         <div className="sectionsContainer">
@@ -118,6 +137,55 @@ const Footer = props => (
         color: #fafafa;
         text-decoration: none;
         margin-right: 30px;
+      }
+      .sectionsMobile {
+        display: none;
+      }
+
+      @media only screen and (max-width: 480px) {
+        .fullContainer {
+          width: 100%;
+           {
+            /* flex-direction: column; */
+          }
+        }
+        .footerContainer {
+          width: 100%;
+          flex-direction: column;
+          align-items: center;
+        }
+        .logoContainer {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          margin-bottom: 30px;
+        }
+        .sectionsContainer {
+          display: none;
+        }
+        .sectionsMobile {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          margin-top: 40px;
+          flex-direction: column;
+        }
+        .firstRow {
+          display: flex;
+          justify-content: space-evenly;
+          width: 100%;
+        }
+        .firstRow > a {
+          color: #fafafa;
+          text-decoration: none;
+        }
+        .iconsContainer {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        }
       }
     `}</style>
   </div>
