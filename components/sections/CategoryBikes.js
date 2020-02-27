@@ -36,6 +36,21 @@ const CategoryBikes = props => (
         font-weight: 300;
         color: #fafafa;
       }
+      @media only screen and (max-width: 480px) {
+        .description {
+          max-width: 430px;
+          margin-left: 10px;
+          padding-right: 30px;
+          top: 50px;
+        }
+        h1 {
+          font-size: 32px;
+        }
+        p {
+          max-width: 400px;
+          font-size: 16px;
+        }
+      }
     `}</style>
   </div>
 );

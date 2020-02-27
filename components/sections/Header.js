@@ -18,6 +18,10 @@ const Header = () => {
         key="viewport"
       />
       <title>S0SBike</title>
+      <style jsx>{`
+        @media only screen and (max-width: 480px) {
+        }
+      `}</style>
     </Head>
   );
 };

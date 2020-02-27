@@ -3,6 +3,7 @@ import Navbar2 from "../components/sections/Navbar2";
 import CategoryBikes from "../components/sections/CategoryBikes";
 import Header from "../components/sections/Header";
 import Footer from "../components/sections/Footer";
+import BurgeMenu from "../components/sections/BurgeMenu";
 
 import fetch from "isomorphic-unfetch";
 
@@ -40,8 +41,8 @@ class retroBikes extends React.Component {
         );
       });
     return (
-      <div>
-        <div>
+      <div className="mainContianer">
+        <div style={{ width: "100%" }}>
           <Header />
           <Navbar2
             home="/"
@@ -53,7 +54,9 @@ class retroBikes extends React.Component {
             whyus="#whyusPage"
             about="#aboutPage"
             recommended="recommended"
+            className="navbar"
           />
+          <BurgeMenu />
           <div id="retroBikes">
             <div className="backgroundImg"></div>
             <div className="backgroundSvg"></div>
@@ -153,6 +156,27 @@ class retroBikes extends React.Component {
             background-color: #fafafa;
             color: #997f67;
             transition: 0.3s;
+          }
+
+          @media only screen and (max-width: 480px) {
+            #retroBikes {
+              max-width: 480px;
+              padding-top: 0px;
+            }
+            .container {
+              /* width: 100%; */
+              width: 400px;
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: space-evenly;
+              padding-right: 25px;
+            }
+            .bike {
+              height: 300px;
+            }
+            .backgroundImg {
+              top: 0px;
+            }
           }
         `}</style>
       </div>

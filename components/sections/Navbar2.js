@@ -2,7 +2,7 @@ import Link from "next/link";
 import Head from "next/head";
 
 const Navbar2 = props => (
-  <div>
+  <div className="navbar">
     <Head>
       <link
         rel="stylesheet"
@@ -163,6 +163,12 @@ const Navbar2 = props => (
       }
       #sixthChild {
         margin-right: 30px;
+      }
+
+      @media only screen and (max-width: 480px) {
+        .navbar {
+          display: none;
+        }
       }
     `}</style>
   </div>

@@ -22,6 +22,7 @@ const Bike = props => (
     </div>
     <style jsx>{`
       @import url("https://use.typekit.net/mmi3fys.css");
+
       .containerBikes {
         width: 100%;
         margin-bottom: 60px;
@@ -74,6 +75,38 @@ const Bike = props => (
         font-size: 14px;
         font-weight: 300;
         color: #fafafa;
+      }
+
+      @media screen and (max-width: 480px) {
+        .containerBikes {
+          width: 170px;
+        }
+        .bike {
+          width: 170px;
+          height: 170px;
+        }
+
+        .bike > img {
+          width: 170px;
+          height: 150px;
+          object-fit: cover;
+        }
+        .bike > span {
+          top: 120px;
+          width: 100px;
+          height: 30px;
+        }
+        .bike > span > a {
+          letter-spacing: 0.1px;
+          padding-left: 5px;
+        }
+        .bike > span > a > span {
+          padding-left: 5px;
+          font-size: 20px;
+        }
+        .bike > p {
+          margin-top: 10px;
+        }
       }
     `}</style>
   </div>
