@@ -38,9 +38,7 @@ const CategoryBikes = props => (
       }
       @media only screen and (max-width: 480px) {
         .description {
-          width: 100vw;
-          margin-left: 10px;
-          margin-right: 10px;
+          width: 90vw;
           top: 50px;
         }
         h1 {
