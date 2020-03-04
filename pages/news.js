@@ -4,6 +4,7 @@ import Header from "../components/sections/Header";
 import Footer from "../components/sections/Footer";
 import Bike from "../components/sections/Bike";
 import CategoryBikes from "../components/sections/CategoryBikes";
+import BurgeMenu from "../components/sections/BurgeMenu";
 
 class News extends React.Component {
   constructor() {
@@ -35,7 +36,7 @@ class News extends React.Component {
       );
     });
     return (
-      <div>
+      <div className="newsPageContainer">
         <div>
           <Header />
           <Navbar2
@@ -49,12 +50,13 @@ class News extends React.Component {
             about="index#aboutPage"
             recommended="recommended"
           />
+          <BurgeMenu />
         </div>
         <div className="fullTitleContainer">
           <div className="titleContainer">
             <CategoryBikes
               category="News"
-              description="LSome stuff I bet you didn't know about bikes, environment, business and sustainability."
+              description="Some stuff I bet you didn't know about bikes, environment, business and sustainability."
             />
           </div>
         </div>
@@ -106,6 +108,25 @@ class News extends React.Component {
             grid-template-columns: repeat(4, 1fr);
             width: 100%;
             justify-items: center;
+          }
+
+          @media only screen and (max-width: 480px) {
+            .newsPageContainer {
+              width: 100vw;
+            }
+            .fullTitleContainer {
+              top: 0;
+            }
+            .newsBigContainer {
+              width: 100vw;
+              margin-top: 60px;
+            }
+            .newsContainer {
+              width: 100vw;
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: space-evenly;
+            }
           }
         `}</style>
       </div>
