@@ -145,9 +145,7 @@ const Footer = props => (
       @media only screen and (max-width: 480px) {
         .fullContainer {
           width: 100vw;
-           {
-            /* flex-direction: column; */
-          }
+          height: 400px;
         }
         .footerContainer {
           width: 100vw;
