@@ -121,6 +121,39 @@ const About = () => {
           color: #997f67;
           transition: 0.3s;
         }
+        @media screen and (max-width: 480px) {
+          .parentContainer {
+            margin-top: 760px;
+            width: 96vw;
+            display: flex;
+            flex-direction: column;
+          }
+          .childContainer {
+            width: 96vw;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+          }
+          p {
+            margin-right: 0px;
+            width: 100%;
+            position: relative;
+            top: 65px;
+            letter-spacing: 0;
+            color: #fafafa;
+            font-family: ronnia, regular;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 20px;
+          }
+
+          .mapContainer {
+            width: 100%;
+          }
+          .overlays {
+            width: 100%;
+          }
+        }
       `}</style>
     </div>
   );

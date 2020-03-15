@@ -117,6 +117,45 @@ const Whyus = () => {
         .cardContainer > div > img {
           width: 280px;
         }
+        @media screen and (max-width: 480px) {
+          .parentContainer {
+            height: 1600px;
+          }
+          .childContainer {
+            width: 96vw;
+          }
+          .cardContainer {
+            display: flex;
+            flex-direction: column;
+          }
+          .secondParagraphContainer {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-top: 30px;
+          }
+          .h1Container {
+            height: 55px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+          }
+          h1 {
+            font-size: 32px;
+            width: 70%;
+          }
+          .borderCenter {
+            margin-top: -30px;
+          }
+          .borderTop {
+            margin-top: 120px;
+          }
+          .paragraph {
+            width: 70vw;
+          }
+        }
       `}</style>
     </div>
   );

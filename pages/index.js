@@ -103,8 +103,12 @@ class Index extends React.Component {
               <Slider />
             </div>
             <Bikes />
-            <Whyus />
-            <About id="aboutPage" />
+            <div className="whyUsContainer">
+              <Whyus />
+            </div>
+            <div className="aboutContainer">
+              <About id="aboutPage" />
+            </div>
           </div>
         </div>
 
@@ -260,13 +264,21 @@ class Index extends React.Component {
 
           @media screen and (max-width: 480px) {
             .content {
-              width: 100vw;
+              max-width: 100vw;
             }
             .bigNavbar {
               display: none;
             }
             .sliderContainer {
               margin-top: 30px;
+            }
+            .whyUsContainer {
+              margin-top: 150px;
+            }
+            .swapfiets {
+              margin-top: 1000px;
+            }
+            .aboutContainer {
             }
           }
 

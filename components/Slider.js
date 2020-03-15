@@ -282,6 +282,12 @@ class Slider extends React.Component {
               overflow: hidden;
               z-index: -5;
             }
+          
+            .backgroundImg{
+              height: 650px;
+              width: 100vw;
+              min-width: 0;
+            }
             #firstButton {
               top: 500px;
               left: 90px;

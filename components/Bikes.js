@@ -190,6 +190,60 @@ const Bikes = () => {
           font-weight: 300;
           color: #fafafa;
         }
+        @media screen and (max-width: 480px) {
+          .bike > span {
+            position: absolute;
+            left: 0px;
+            top: 100px;
+            width: 140px;
+            height: 40px;
+            background: #1c1713 0% 0% no-repeat padding-box;
+            opacity: 0.8;
+            display: grid;
+            align-items: center;
+          }
+          .parentContainer {
+            padding-top: 40px;
+            width: 100vw;
+          }
+          .h4Container {
+            width: 100vw;
+          }
+          h1 {
+            text-align: center;
+            line-height: 1.1em;
+            margin: 0px 0 0px;
+            font-size: 26px;
+            font-family: Farnham Text;
+            color: #fafafa;
+            letter-spacing: 1px;
+            font-weight: 100;
+          }
+          h4 {
+            width: 96vw;
+
+            padding: 50px 0 70px;
+            text-align: center;
+            color: #fafafa;
+          }
+          .containerBikes {
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+          }
+
+          .bike {
+            width: 90%;
+            height: 200px;
+            margin-bottom: 40px;
+          }
+          .bike > img {
+            width: 100%;
+          }
+        }
       `}</style>
     </div>
   );
