@@ -260,8 +260,6 @@ class Slider extends React.Component {
          
           }
 
-         
-
           .cards-slider-wrapper {
             display: flex;
             position: absolute;
@@ -269,7 +267,21 @@ class Slider extends React.Component {
             transition: transform .3s ease-out;
           }
 
-              `}</style>
+          @media screen and (max-width: 480px) {
+            .sliderHomePage {
+              height: 610px;
+              width: 100vw;
+            }
+           
+            #firstButton {
+              top: 500px;
+              left: 90px;
+            }
+            #secondButton {
+              top: 500px;
+              right: 90px;
+            }
+          }`}</style>
       </div>
     );
   }

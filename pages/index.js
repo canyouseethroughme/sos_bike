@@ -7,6 +7,7 @@ import Whyus from "../components/Whyus";
 import About from "../components/About";
 import Footer from "../components/sections/Footer";
 import NewsLink from "../components/sections/NewsLink";
+import BurgetMenu from "../components/sections/BurgeMenu";
 
 import Link from "next/link";
 
@@ -70,17 +71,20 @@ class Index extends React.Component {
       <div>
         <Header />
         <div className="content">
-          <Navbar
-            home="/"
-            shop="#shopPage"
-            custom="custom-bikes"
-            retro="new-and-retro"
-            new="rentals"
-            parts="bike-parts"
-            whyus="#whyusPage"
-            about="#aboutPage"
-            recommended="recommended"
-          />
+          <div className="bigNavbar">
+            <Navbar
+              home="/"
+              shop="#shopPage"
+              custom="custom-bikes"
+              retro="new-and-retro"
+              new="rentals"
+              parts="bike-parts"
+              whyus="#whyusPage"
+              about="#aboutPage"
+              recommended="recommended"
+            />
+          </div>
+          <BurgetMenu />
           <div id={active && "scrolled"} className="navbarSecond">
             <Navbar2
               home="/"
@@ -95,7 +99,9 @@ class Index extends React.Component {
             />
           </div>
           <div>
-            <Slider />
+            <div className="sliderContainer">
+              <Slider />
+            </div>
             <Bikes />
             <Whyus />
             <About id="aboutPage" />
@@ -250,6 +256,18 @@ class Index extends React.Component {
           #scrolled {
             position: absolute;
             animation: navOn 0.3s linear forwards;
+          }
+
+          @media screen and (max-width: 480px) {
+            .content {
+              width: 100vw;
+            }
+            .bigNavbar {
+              display: none;
+            }
+            .sliderContainer {
+              margin-top: 30px;
+            }
           }
 
           @keyframes navOn {
