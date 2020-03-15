@@ -269,10 +269,19 @@ class Slider extends React.Component {
 
           @media screen and (max-width: 480px) {
             .sliderHomePage {
-              height: 610px;
+              height: 650px;
               width: 100vw;
             }
-           
+            .iframeContainer{
+              position: absolute;
+              top: 0;
+              left: 0;
+              height: 650px;
+              width: 100vw;
+              min-width: 0;
+              overflow: hidden;
+              z-index: -5;
+            }
             #firstButton {
               top: 500px;
               left: 90px;
