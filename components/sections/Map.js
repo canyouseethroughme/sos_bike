@@ -4,8 +4,6 @@ import ReactMapGL, { Marker } from "react-map-gl";
 class Map extends Component {
   state = {
     viewport: {
-      width: "980px",
-      height: "677px",
       latitude: 56.150527,
       longitude: 10.202363,
       zoom: 15
@@ -15,6 +13,8 @@ class Map extends Component {
   render() {
     return (
       <ReactMapGL
+        width="100%"
+        height="100%"
         mapStyle="mapbox://styles/stefandrei123/ck1avt2880emk1dqut8336b0s"
         mapboxApiAccessToken="pk.eyJ1Ijoic3RlZmFuZHJlaTEyMyIsImEiOiJjazBjNWZoaXcweXE1M25udjFrdWs1Y2IyIn0.EjIkuQ8tjZNmUi4VIq0MNQ"
         onViewportChange={viewport => this.setState({ viewport })}

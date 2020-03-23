@@ -242,6 +242,22 @@ class SingleProductSlideshow extends React.Component {
             padding-left: 35px;
             font-size: 25px;
           }
+
+          @media screen and (max-width: 480px) {
+            .bigImgContainer > img {
+              width: 100vw;
+              height: 270px;
+            }
+            .smallImagesContainer {
+              width: 100vw;
+              justify-content: space-evenly;
+              margin-top: 0px;
+            }
+            .smallImagesContainer > img {
+              height: 40px;
+              width: 40px;
+            }
+          }
         `}</style>
       </div>
     );

@@ -31,7 +31,7 @@ const Whyus = () => {
               </p>
               <img src="static/bikes_assets/2-edited@2x.png" alt="" />
             </div>
-            <div>
+            <div className="thirdParagraphContainer">
               <h2>03</h2>
               <p className="paragraph">
                 We work closely with local bike shops and suppliers. We always
@@ -139,21 +139,29 @@ const Whyus = () => {
           .h1Container {
             height: 55px;
             width: 100%;
-            display: grid;
-            grid-template-columns: 1.3fr 1fr;
+            display: flex;
+            flex-direction: row;
+            margin-left: 32px;
+            align-content: center;
           }
           h1 {
             font-size: 32px;
             width: 70%;
           }
           .borderCenter {
-            margin-top: -30px;
+            width: 40px;
+            margin-bottom: 35px;
           }
           .borderTop {
-            margin-top: 120px;
+            margin-top: 40px;
+            margin-left: 32px;
+            width: 85px;
           }
           .paragraph {
             width: 70vw;
+          }
+          .thirdParagraphContainer {
+            margin-top: 30px;
           }
         }
       `}</style>

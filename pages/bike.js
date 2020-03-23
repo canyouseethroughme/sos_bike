@@ -4,6 +4,7 @@ import Header from "../components/sections/Header";
 import ReactModal from "react-modal";
 import SingleProductSlideshow from "../components/sections/SingleProductSlideshow";
 import Footer from "../components/sections/Footer";
+import BurgeMenu from "../components/sections/BurgeMenu";
 
 class Bike extends React.Component {
   constructor() {
@@ -14,6 +15,36 @@ class Bike extends React.Component {
       bikeInfo: null,
       modalOpen: false
     };
+  }
+
+  componentDidMount() {
+    const url = window.location;
+    const urlObject = new URL(url);
+    const bikeType = urlObject.searchParams.get("type");
+    const bikeId = urlObject.searchParams.get("id");
+    this.setState({ bikeType, bikeId }, () => {
+      let urlValue = "";
+      if (this.state.bikeType === "new and retro") {
+        urlValue = "retro";
+      }
+      if (this.state.bikeType === "rentals") {
+        urlValue = "rentals";
+      }
+      if (this.state.bikeType === "bike-parts") {
+        urlValue = "bike_parts";
+      }
+      fetch(
+        `https://sosbike.dk/wordpress/wp-json/wp/v2/${urlValue}/${this.state.bikeId}`
+      )
+        .then(res => res.json())
+        .then(jsonRes => {
+          console.log(
+            `https://sosbike.dk/wordpress/wp-json/wp/v2/${urlValue}/${this.state.bikeId}`
+          );
+          console.log("bikeinfo here", jsonRes);
+          this.setState({ bikeInfo: jsonRes }, () => {});
+        });
+    });
   }
 
   openModal = () => {
@@ -29,6 +60,7 @@ class Bike extends React.Component {
       <div>
         <div>
           <Header />
+
           <Navbar2
             home="/"
             shop="#shopPage"
@@ -40,6 +72,7 @@ class Bike extends React.Component {
             about="#aboutPage"
             recommended="recommended"
           />
+          <BurgeMenu />
           {this.state.bikeInfo && (
             <div className="productContainer">
               <ReactModal
@@ -296,39 +329,23 @@ class Bike extends React.Component {
             margin-top: 60px;
             font-weight: lighter;
           }
+
+          @media screen and (max-width: 480px) {
+            .productContainer {
+              flex-direction: column;
+              padding-top: 100px;
+            }
+            .product {
+              flex-direction: column;
+            }
+            .productInfo {
+              position: absolute;
+              padding-top: 150px;
+            }
+          }
         `}</style>
       </div>
     );
-  }
-
-  componentDidMount() {
-    const url = window.location;
-    const urlObject = new URL(url);
-    const bikeType = urlObject.searchParams.get("type");
-    const bikeId = urlObject.searchParams.get("id");
-    this.setState({ bikeType, bikeId }, () => {
-      let urlValue = "";
-      if (this.state.bikeType === "new and retro") {
-        urlValue = "retro";
-      }
-      if (this.state.bikeType === "rentals") {
-        urlValue = "rentals";
-      }
-      if (this.state.bikeType === "bike-parts") {
-        urlValue = "bike_parts";
-      }
-      fetch(
-        `https://sosbike.dk/wordpress/wp-json/wp/v2/${urlValue}/${this.state.bikeId}`
-      )
-        .then(res => res.json())
-        .then(jsonRes => {
-          console.log(
-            `https://sosbike.dk/wordpress/wp-json/wp/v2/${urlValue}/${this.state.bikeId}`
-          );
-          console.log("bikeinfo here", jsonRes);
-          this.setState({ bikeInfo: jsonRes }, () => {});
-        });
-    });
   }
 }
 

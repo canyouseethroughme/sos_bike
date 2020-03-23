@@ -1,11 +1,16 @@
 import DynamicComponentWithNoSSR from "../components/sections/DynamicComponentNoSSR";
+import Map from "./sections/Map";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 const About = () => {
+  const [mapWidth, setMapWidth] = useState();
+  const [mapHeight, setMapHeight] = useState();
+
   return (
     <div>
       <div id="aboutPage" className="parentContainer">
         <div className="childContainer">
-          <h1>About</h1>
+          <h1>About us</h1>
           <div className="borderTop"></div>
           <p>
             SoS Bike is not only a place for everyday cyclers, but for bike
@@ -38,8 +43,8 @@ const About = () => {
             <button>Contact us</button>
           </a>
         </div>
-        <div className="mapContainer">
-          <DynamicComponentWithNoSSR />
+        <div className="mapContainer" id="mapContainer">
+          <Map width={mapWidth} height={mapHeight} />
         </div>
       </div>
       <style jsx>{`
@@ -123,10 +128,11 @@ const About = () => {
         }
         @media screen and (max-width: 480px) {
           .parentContainer {
-            margin-top: 760px;
-            width: 96vw;
+            margin-top: 900px;
+            width: 100%;
             display: flex;
             flex-direction: column;
+            justify-content: center;
           }
           .childContainer {
             width: 96vw;
@@ -148,10 +154,23 @@ const About = () => {
           }
 
           .mapContainer {
-            width: 100%;
+            width: 100vw;
+            height: 400px;
           }
           .overlays {
             width: 100%;
+          }
+          .borderTop {
+            margin-top: -170px;
+            width: 70px;
+            margin-left: 32px;
+          }
+          .childContainer > p {
+            margin-left: 32px;
+            width: 90%;
+          }
+          .childContainer > h1 {
+            margin-left: 32px;
           }
         }
       `}</style>

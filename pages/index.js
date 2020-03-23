@@ -266,6 +266,9 @@ class Index extends React.Component {
             .content {
               max-width: 100vw;
             }
+            .mainContainer {
+              margin-top: 500px;
+            }
             .bigNavbar {
               display: none;
             }
@@ -276,9 +279,22 @@ class Index extends React.Component {
               margin-top: 150px;
             }
             .swapfiets {
-              margin-top: 1000px;
+              margin-top: 585px;
+              height: 692px;
+              background-position: center;
             }
-            .aboutContainer {
+
+            .brownShadow {
+              height: 692px;
+              flex-direction: column;
+              align-items: center;
+            }
+
+            .newsTitleContainer {
+              display: none;
+            }
+            .newsSlider {
+              display: none;
             }
           }
 
