@@ -3,6 +3,8 @@ import Header from "../components/sections/Header";
 import Footer from "../components/sections/Footer";
 import CategoryBikes from "../components/sections/CategoryBikes";
 
+import BurgeMenu from "../components/sections/BurgeMenu";
+
 const Recommended = props => (
   <div>
     <div>
@@ -18,6 +20,7 @@ const Recommended = props => (
         about="#aboutPage"
         recommended="recommended"
       />
+      <BurgeMenu />
     </div>
     <div className="fullTitleContainer">
       <div className="titleContainer">
@@ -32,11 +35,14 @@ const Recommended = props => (
     </div>
     <div className="tofContainer">
       <div className="smallPageContainer">
-        <div className="dateContainer">
-          <p>
-            14<sup>th</sup>
-          </p>
-          <p>September</p>
+        <div className="dateTitle">
+          <div className="dateContainer">
+            <p>
+              14<sup>th</sup>
+            </p>
+            <p>September</p>
+          </div>
+          <h1>Terms of service</h1>
         </div>
         <div className="textContainer">
           <h1>Terms of service</h1>
@@ -199,6 +205,47 @@ const Recommended = props => (
         font-size: 16px;
         font-weight: regular;
         margin-bottom: 40px;
+      }
+      .dateTitle > h1 {
+        display: none;
+      }
+      @media only screen and (max-width: 480px) {
+        .fullTitleContainer {
+          top: 0;
+        }
+        .tofContainer {
+          margin-top: 30px;
+        }
+
+        .smallPageContainer {
+          justify-content: space-evenly;
+          flex-direction: column;
+          width: 905vw;
+        }
+        .textContainer {
+          margin-left: 20px;
+          margin-top: 9px;
+        }
+        .dateContainer {
+          margin-left: 20px;
+        }
+
+        .textContainer > h1 {
+          display: none;
+        }
+        .dateTitle > h1 {
+          display: block;
+          margin-top: 13px;
+          margin-left: 20px;
+        }
+        .dateTitle {
+          display: flex;
+          flex-direction: row;
+          font-family: farnham text;
+          color: #fafafa;
+          font-weight: bold;
+          font-size: 18px;
+        }
       }
     `}</style>
   </div>
