@@ -1,11 +1,13 @@
 import React from "react";
 import Navbar2 from "../components/sections/Navbar2";
 import Footer from "../components/sections/Footer";
+import BurgeMenu from "../components/sections/BurgeMenu";
 
 const ComingSoon = () => {
   return (
     <div>
       <Navbar2 />
+      <BurgeMenu />
       <div className="imgContainer">
         <img src="static/signnwhite.png" width={200} height={200} />
       </div>
