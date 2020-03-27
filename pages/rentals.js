@@ -1,6 +1,8 @@
 import Bike from "../components/sections/Bike";
 import Navbar2 from "../components/sections/Navbar2";
 import CategoryBikes from "../components/sections/CategoryBikes";
+import Footer from "../components/sections/Footer";
+import BurgeMenu from "../components/sections/BurgeMenu";
 
 class newBikes extends React.Component {
   constructor(props) {
@@ -41,7 +43,7 @@ class newBikes extends React.Component {
     }
     return (
       <div>
-        <div>
+        <div className="rentalsContainer">
           <Navbar2
             home="/"
             shop="#shopPage"
@@ -53,6 +55,7 @@ class newBikes extends React.Component {
             about="#aboutPage"
             recommended="recommended"
           />
+          <BurgeMenu />
           <div id="retroBikes">
             <div className="backgroundImg"></div>
             <div className="backgroundSvg"></div>
@@ -83,6 +86,7 @@ class newBikes extends React.Component {
             background-color: #1c1713;
           }
         `}</style>
+        <Footer />
         <style jsx>{`
           #retroBikes {
             width: 1200px;
@@ -151,6 +155,33 @@ class newBikes extends React.Component {
             background-color: #fafafa;
             color: #997f67;
             transition: 0.3s;
+          }
+
+          @media only screen and (max-width: 480px) {
+             {
+              /* .rentalsContainer {
+              display: flex;
+              flex-direction: column;
+              width: 100vw;
+            } */
+            }
+            #retroBikes {
+              width: 100vw;
+              margin: 0;
+            }
+
+            .backgroundImg {
+              width: 100vw;
+              top: 0px;
+            }
+
+            .container {
+              width: 100vw;
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: space-evenly;
+              margin-top: 60px;
+            }
           }
         `}</style>
       </div>
