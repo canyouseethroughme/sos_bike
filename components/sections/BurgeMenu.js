@@ -53,7 +53,7 @@ const BurgerMenu = () => {
         .menuContainer{
             display:none;
             position: absolute;
-            z-Index: 2;
+            z-Index: 3;
 
         }
         .menuContainer > button {
@@ -77,7 +77,7 @@ const BurgerMenu = () => {
                 background-color: #1C1713;
                 position: absolute;
                 top: 130px;
-                z-Index: 10;
+                z-Index: 10 !important;
                 width: 100%;
                 height: 100%;
 
