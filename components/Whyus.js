@@ -161,7 +161,7 @@ const Whyus = () => {
             width: 70vw;
           }
           .thirdParagraphContainer {
-            margin-top: 30px;
+            margin-top: 430px;
           }
         }
       `}</style>
