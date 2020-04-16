@@ -1,7 +1,7 @@
 // import Link from "next/link";
 import Link from "next/link";
 
-const Footer = props => (
+const Footer = (props) => (
   <div>
     <div className="fullContainer">
       <div className="footerContainer">
@@ -145,7 +145,7 @@ const Footer = props => (
       @media only screen and (max-width: 480px) {
         .fullContainer {
           width: 100vw;
-          height: 400px;
+          height: 200px;
         }
         .footerContainer {
           width: 100vw;

@@ -128,7 +128,7 @@ const About = () => {
         }
         @media screen and (max-width: 480px) {
           .parentContainer {
-            margin-top: 900px;
+            margin-top: 1150px;
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -156,6 +156,7 @@ const About = () => {
           .mapContainer {
             width: 100vw;
             height: 400px;
+            margin-top: 450px;
           }
           .overlays {
             width: 100%;
@@ -171,6 +172,9 @@ const About = () => {
           }
           .childContainer > h1 {
             margin-left: 32px;
+          }
+          .icons {
+            margin-left: 35px;
           }
         }
       `}</style>

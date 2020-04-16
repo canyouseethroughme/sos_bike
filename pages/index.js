@@ -279,7 +279,7 @@ class Index extends React.Component {
               margin-top: 150px;
             }
             .swapfiets {
-              margin-top: 585px;
+              margin-top: 735px;
               height: 692px;
               background-position: center;
             }

@@ -13,7 +13,7 @@ class Bike extends React.Component {
       bikeType: null,
       bikeId: null,
       bikeInfo: null,
-      modalOpen: false
+      modalOpen: false,
     };
   }
 
@@ -36,8 +36,8 @@ class Bike extends React.Component {
       fetch(
         `https://sosbike.dk/wordpress/wp-json/wp/v2/${urlValue}/${this.state.bikeId}`
       )
-        .then(res => res.json())
-        .then(jsonRes => {
+        .then((res) => res.json())
+        .then((jsonRes) => {
           console.log(
             `https://sosbike.dk/wordpress/wp-json/wp/v2/${urlValue}/${this.state.bikeId}`
           );
@@ -84,6 +84,11 @@ class Bike extends React.Component {
               >
                 <div className="modalContainer">
                   <div className="modalInformation">
+                    <div className="closeIcon">
+                      <p className="fa" onClick={this.closeModal}>
+                        &#xf00d;
+                      </p>
+                    </div>
                     <img
                       src={this.state.bikeInfo.acf.main_image.url}
                       height={400}
@@ -126,7 +131,7 @@ class Bike extends React.Component {
                     <b>{this.state.bikeInfo.title.rendered}</b>
                   </h1>
                   <p>{this.state.bikeInfo.acf.description}</p>
-                  <table>
+                  <table className="table">
                     <thead>
                       <tr>
                         <th>Brand</th>
@@ -180,6 +185,9 @@ class Bike extends React.Component {
           }
         `}</style>
         <style jsx>{`
+          .closeIcon{
+            display: none;
+          }
           .modalContainer {
             position: absolute;
             margin-top: 140px;
@@ -341,8 +349,59 @@ class Bike extends React.Component {
             .productInfo {
               position: absolute;
               padding-top: 150px;
+              z-index: 4;
+              margin-top: 30px;
             }
-          }
+            .table {
+              display: none;
+            }
+            .productInfo > h1 {
+              margin-left: 20px;
+              margin-top: 5px;
+
+            }
+            .productInfo > p:first-of-type {
+              margin-left: 20px;
+            }
+            .productInfo > p {
+              margin-left: 20px;
+              margin-top: 90px;
+              width: 355px;
+            }
+            .getOfferButton{
+              width: 315px;
+              margin-left: 30px;
+              margin-top: 40px;
+              margin-bottom: 80px;
+            }
+            .modalContactInformation
+            {
+              position: absolute;
+              width: 300px;
+              z-index: 20;
+            }
+            .modalInformation > img {
+              display: none;
+            }
+           
+            .modalContainer{
+              position: absolute;
+              z-index: 20;
+              height: 570px;
+              top: 0
+            }
+            .closeIcon{
+              width: 95%;
+              display: flex;
+              justify-content: flex-end;
+              margin-top: 15px;
+              flex-direction: row;
+            }
+            .closeIcon > p {
+              color: white;
+              font-size: 20px;
+              z-index: 20;
+            }
         `}</style>
       </div>
     );
