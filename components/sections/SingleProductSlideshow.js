@@ -106,7 +106,7 @@ class SingleProductSlideshow extends React.Component {
             onClick={() => {
               this.setState({ selectedImage: "main_image" });
             }}
-            onDoubleClick={() => console.log("Double click test")}
+            onDoubleClick={() => alert("Double click test")}
             height={70}
             width={80}
           />
