@@ -53,6 +53,12 @@ class SingleProductSlideshow extends React.Component {
     }
   };
 
+  onSmallImageDoubleClick = (imgName) => {
+    this.setState({ selectedImage: imgName }, () => {
+      this.openModal();
+    });
+  };
+
   render() {
     return (
       <div>
@@ -71,14 +77,24 @@ class SingleProductSlideshow extends React.Component {
                 <p onClick={this.previousImage}>&larr;</p>
               </div>
             </div>
-            <img
-              src={this.props.bikeInfo.acf[this.state.selectedImage].url}
-              style={{ objectFit: "contain", height: 500 }}
-            />
+            <img src={this.props.bikeInfo.acf[this.state.selectedImage].url} />
             <div>
               <div className="arrows">
                 <p onClick={this.nextImage}>&rarr;</p>
               </div>
+            </div>
+            <div className="arrowsMobile">
+              <div className="arrowMobile">
+                <p onClick={this.previousImage}>&larr;</p>
+              </div>
+              <div className="arrowMobile">
+                <p onClick={this.nextImage}>&rarr;</p>
+              </div>
+            </div>
+            <div className="closeIcon">
+              <p className="fa" onClick={this.closeModal}>
+                &#xf00d;
+              </p>
             </div>
           </div>
         </ReactModal>
@@ -106,7 +122,7 @@ class SingleProductSlideshow extends React.Component {
             onClick={() => {
               this.setState({ selectedImage: "main_image" });
             }}
-            onDoubleClick={() => alert("Double click test")}
+            onDoubleClick={() => this.onSmallImageDoubleClick("main_image")}
             height={70}
             width={80}
           />
@@ -119,6 +135,7 @@ class SingleProductSlideshow extends React.Component {
             onClick={() => {
               this.setState({ selectedImage: "image2" });
             }}
+            onDoubleClick={() => this.onSmallImageDoubleClick("image2")}
             height={70}
             width={80}
           />
@@ -131,6 +148,7 @@ class SingleProductSlideshow extends React.Component {
             onClick={() => {
               this.setState({ selectedImage: "image3" });
             }}
+            onDoubleClick={() => this.onSmallImageDoubleClick("image3")}
             height={70}
             width={80}
           />
@@ -143,6 +161,7 @@ class SingleProductSlideshow extends React.Component {
             onClick={() => {
               this.setState({ selectedImage: "image4" });
             }}
+            onDoubleClick={() => this.onSmallImageDoubleClick("image4")}
             height={70}
             width={80}
           />
@@ -155,6 +174,7 @@ class SingleProductSlideshow extends React.Component {
             onClick={() => {
               this.setState({ selectedImage: "image5" });
             }}
+            onDoubleClick={() => this.onSmallImageDoubleClick("image5")}
             height={70}
             width={80}
           />
@@ -167,12 +187,16 @@ class SingleProductSlideshow extends React.Component {
             onClick={() => {
               this.setState({ selectedImage: "image6" });
             }}
+            onDoubleClick={() => this.onSmallImageDoubleClick("image6")}
             height={70}
             width={80}
           />
         </div>
         <style jsx>{`
           .brownLayer {
+            display: none;
+          }
+          .closeIcon {
             display: none;
           }
           img {
@@ -198,6 +222,9 @@ class SingleProductSlideshow extends React.Component {
             text-decoration: none;
             outline: 0;
             width: 100%;
+          }
+          .arrowsMobile {
+            display: none;
           }
           .modalContaine:focus {
             outline: 0;
@@ -247,6 +274,10 @@ class SingleProductSlideshow extends React.Component {
           .bigImgContainer > span > a > span {
             padding-left: 35px;
             font-size: 25px;
+          }
+          .modalContainer > img {
+            object-fit: contain;
+            height: 500px;
           }
 
           @media screen and (max-width: 480px) {
@@ -298,6 +329,49 @@ class SingleProductSlideshow extends React.Component {
               );
               margin-top: -70px;
               height: 500px;
+            }
+            .modalContainer {
+              position: absolute;
+              z-index: 20;
+              height: 600px;
+              top: 0;
+              background-color: #1c1713;
+              flex-direction: column;
+              justify-content: flex-start;
+              margin-top: 130px;
+            }
+            .modalContainer > img {
+              width: 100%;
+              height: 250px;
+            }
+            .arrows {
+              display: none;
+            }
+            .arrowsMobile {
+              display: flex;
+              flex-direction: row;
+            }
+            .arrowMobile {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: white;
+              font-size: 50px;
+              outline: none;
+              cursor: pointer;
+            }
+            .closeIcon {
+              width: 95%;
+              display: flex;
+              justify-content: flex-end;
+              margin-top: 15px;
+              flex-direction: row;
+              position: absolute;
+            }
+            .closeIcon > p {
+              color: white;
+              font-size: 20px;
+              z-index: 20;
             }
           }
         `}</style>
