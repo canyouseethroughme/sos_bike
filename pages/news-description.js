@@ -12,7 +12,7 @@ class NewsDescription extends React.Component {
       bikeType: null,
       newsId: null,
       newsInfo: null,
-      modalOpen: false
+      modalOpen: false,
     };
   }
 
@@ -117,11 +117,9 @@ class NewsDescription extends React.Component {
       fetch(
         `https://sosbike.dk/wordpress/wp-json/wp/v2/news_and_stuff/${this.state.newsId}`
       )
-        .then(res => res.json())
-        .then(jsonRes => {
-          this.setState({ newsInfo: jsonRes }, () => {
-            console.log(this.state.newsInfo);
-          });
+        .then((res) => res.json())
+        .then((jsonRes) => {
+          this.setState({ newsInfo: jsonRes });
         });
     });
   }

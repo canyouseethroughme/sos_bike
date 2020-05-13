@@ -9,17 +9,16 @@ class bikeParts extends React.Component {
     super(props);
     this.state = {
       bikes: [],
-      showAll: false
+      showAll: false,
     };
   }
 
   componentDidMount() {
     fetch("https://sosbike.dk/wordpress/wp-json/wp/v2/bike_parts?per_page=100")
-      .then(result => result.json())
-      .then(result => {
-        console.log(result);
+      .then((result) => result.json())
+      .then((result) => {
         this.setState({
-          bikes: result
+          bikes: result,
         });
       });
   }

@@ -38,10 +38,6 @@ class Bike extends React.Component {
       )
         .then((res) => res.json())
         .then((jsonRes) => {
-          console.log(
-            `https://sosbike.dk/wordpress/wp-json/wp/v2/${urlValue}/${this.state.bikeId}`
-          );
-          console.log("bikeinfo here", jsonRes);
           this.setState({ bikeInfo: jsonRes }, () => {});
         });
     });

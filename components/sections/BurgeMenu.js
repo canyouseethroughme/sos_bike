@@ -9,8 +9,7 @@ const BurgerMenu = () => {
   useEffect(() => {
     // Update the document title using the browser API
     const url = window.location.href.split("/")[3];
-    console.log(window.location.href.split("/"));
-    console.log("url here", url);
+
     setMenuPostition(url);
   }, []);
   const toggleButton = () => {

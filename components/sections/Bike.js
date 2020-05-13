@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const Bike = props => (
+const Bike = (props) => (
   <div>
     <div className="containerBikes">
       <div className="bike">
@@ -8,12 +8,12 @@ const Bike = props => (
         <Link
           href={{
             pathname: props.pageRequested,
-            query: { type: props.type, id: props.id }
+            query: { type: props.type, id: props.id },
           }}
         >
           <span>
             <a>
-              {props.id} {console.log(props)}View more<span>&#43;</span>
+              {props.id}View more<span>&#43;</span>
             </a>
           </span>
         </Link>
