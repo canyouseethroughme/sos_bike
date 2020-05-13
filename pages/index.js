@@ -15,7 +15,7 @@ class Index extends React.Component {
   state = {
     hasAnimation: false,
     active: 0,
-    news: []
+    news: [],
   };
 
   componentDidMount() {
@@ -23,8 +23,8 @@ class Index extends React.Component {
     fetch(
       "https://sosbike.dk/wordpress/wp-json/wp/v2/news_and_stuff?per_page=100"
     )
-      .then(res => res.json())
-      .then(jsonRes => {
+      .then((res) => res.json())
+      .then((jsonRes) => {
         this.setState({ news: jsonRes });
       });
 
@@ -34,8 +34,8 @@ class Index extends React.Component {
       (direction[1] === "aboutPage" || direction[1] === "whyusPage")
     ) {
       setTimeout(() => {
-        document.getElementById("#" + direction[1]).scrollIntoView({
-          behavior: "smooth"
+        document.getElementById(direction[1]).scrollIntoView({
+          behavior: "smooth",
         });
       }, 300);
     }

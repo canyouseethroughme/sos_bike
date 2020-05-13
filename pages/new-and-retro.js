@@ -12,16 +12,16 @@ class retroBikes extends React.Component {
     super(props);
     this.state = {
       bikes: [],
-      showAll: false
+      showAll: false,
     };
   }
 
   componentDidMount() {
     fetch("https://sosbike.dk/wordpress/wp-json/wp/v2/retro?per_page=100")
-      .then(result => result.json())
-      .then(result => {
+      .then((result) => result.json())
+      .then((result) => {
         this.setState({
-          bikes: result
+          bikes: result,
         });
       });
   }
@@ -46,13 +46,13 @@ class retroBikes extends React.Component {
           <Header />
           <Navbar2
             home="/"
-            shop="#shopPage"
+            shop="/#shopPage"
             custom="custom-bikes"
             retro="new-and-retro"
             new="rentals"
             parts="bike-parts"
-            whyus="#whyusPage"
-            about="#aboutPage"
+            whyus="/#whyusPage"
+            about="/#aboutPage"
             recommended="recommended"
             className="navbar"
           />

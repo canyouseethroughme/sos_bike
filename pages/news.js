@@ -10,7 +10,7 @@ class News extends React.Component {
   constructor() {
     super();
     this.state = {
-      news: []
+      news: [],
     };
   }
 
@@ -18,8 +18,8 @@ class News extends React.Component {
     fetch(
       "https://sosbike.dk/wordpress/wp-json/wp/v2/news_and_stuff?per_page=100"
     )
-      .then(res => res.json())
-      .then(jsonRes => {
+      .then((res) => res.json())
+      .then((jsonRes) => {
         this.setState({ news: jsonRes });
       });
   }
@@ -41,13 +41,13 @@ class News extends React.Component {
           <Header />
           <Navbar2
             home="/"
-            shop="#shopPage"
+            shop="/#shopPage"
             custom="custom-bikes"
             retro="new-and-retro"
             new="rentals"
             parts="bike-parts"
-            whyus="index#whyusPage"
-            about="index#aboutPage"
+            whyus="/#whyusPage"
+            about="/#aboutPage"
             recommended="recommended"
           />
           <BurgeMenu />

@@ -42,13 +42,13 @@ class bikeParts extends React.Component {
         <div>
           <Navbar2
             home="/"
-            shop="#shopPage"
+            shop="/#shopPage"
             custom="custom-bikes"
             retro="new-and-retro"
             new="rentals"
             parts="bike-parts"
-            whyus="#whyusPage"
-            about="#aboutPage"
+            whyus="/#whyusPage"
+            about="/#aboutPage"
             recommended="recommended"
           />
           <BurgeMenu />
