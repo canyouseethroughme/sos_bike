@@ -2,8 +2,9 @@ import Navbar2 from "../components/sections/Navbar2";
 import Header from "../components/sections/Header";
 import Footer from "../components/sections/Footer";
 import CategoryBikes from "../components/sections/CategoryBikes";
+import BurgerMenu from "../components/sections/BurgeMenu";
 
-const Recommended = props => (
+const Recommended = (props) => (
   <div>
     <div>
       <Header />
@@ -18,6 +19,7 @@ const Recommended = props => (
         about="#aboutPage"
         recommended="recommended"
       />
+      <BurgerMenu />
       <div className="fullTitleContainer">
         <div className="titleContainer">
           <CategoryBikes category="Recommended" />
@@ -120,6 +122,31 @@ const Recommended = props => (
         font-size: 16px;
         width: 70%;
         margin-bottom: 40px;
+      }
+
+      @media only screen and (max-width: 480px) {
+        .fullTitleContainer {
+          top: 0;
+        }
+        .letterContainer {
+          padding-top: 0px;
+          flex-direction: column;
+        }
+        .imageContainer {
+          justify-content: center;
+          width: 100%;
+        }
+        .textContainer {
+          margin-left: 20px;
+        }
+        .textContainer > h1 {
+          margin-bottom: 20px;
+          margin-top: 40px;
+        }
+        .textContainer > p {
+          width: 90%;
+          margin-bottom: 20px;
+        }
       }
     `}</style>
   </div>
